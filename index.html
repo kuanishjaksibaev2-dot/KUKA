@@ -6,6 +6,8 @@
   <title>SAQ by Qundyz — Конные прогулки в Алматы</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <style>
     :root {
       --emerald: #2d6a4f;
@@ -373,15 +375,7 @@
     }
     footer a { color: var(--gold); text-decoration: none; }
 
-    /* SCROLL REVEAL */
-    .reveal {
-      opacity: 0; transform: translateY(28px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
+    /* SCROLL REVEAL handled by AOS */
 
     /* MOBILE NAV */
     @media (max-width: 768px) {
@@ -431,11 +425,11 @@
 <section class="about-section py-20 px-4" id="about">
   <div style="max-width:1100px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;" class="about-grid">
-      <div class="reveal about-img" style="min-height:420px;">
+      <div class="about-img" data-aos="fade-right" data-aos-duration="900" style="min-height:420px;">
         <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80" alt="Девушка с луком на лошади" style="height:420px;"/>
         <div class="about-badge">✦ SAQ by Qundyz</div>
       </div>
-      <div class="reveal reveal-delay-1">
+      <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
         <span class="section-eyebrow">О нас</span>
         <h2 class="section-title">Здесь живёт<br/>дух степей</h2>
         <div class="gold-line left"></div>
@@ -466,12 +460,12 @@
 <!-- RIDE INCLUDED -->
 <section style="background:var(--beige-light);padding:5rem 1rem;" id="ride">
   <div style="max-width:1100px;margin:0 auto;text-align:center;">
-    <span class="section-eyebrow reveal">Что входит в прогулку</span>
-    <h2 class="section-title reveal reveal-delay-1">Полный пакет впечатлений</h2>
-    <div class="gold-line reveal reveal-delay-2"></div>
+    <span class="section-eyebrow" data-aos="fade-up">Что входит в прогулку</span>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Полный пакет впечатлений</h2>
+    <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:0.5rem;">
 
-      <div class="ride-card reveal reveal-delay-1">
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="0">
         <img src="https://images.unsplash.com/photo-1475776408506-9a5371e7a068?w=600&q=80" alt="Конная прогулка"/>
         <div class="ride-card-body">
           <h3>🐎 Конная прогулка</h3>
@@ -479,7 +473,7 @@
         </div>
       </div>
 
-      <div class="ride-card reveal reveal-delay-2">
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="100">
         <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600&q=80" alt="Стрельба из лука"/>
         <div class="ride-card-body">
           <h3>🏹 Стрельба из лука</h3>
@@ -487,7 +481,7 @@
         </div>
       </div>
 
-      <div class="ride-card reveal reveal-delay-3">
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="200">
         <img src="https://images.unsplash.com/photo-1490424660416-359912d314b3?w=600&q=80" alt="Этнонаряды"/>
         <div class="ride-card-body">
           <h3>👘 Этнонаряды</h3>
@@ -495,7 +489,7 @@
         </div>
       </div>
 
-      <div class="ride-card reveal">
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="300">
         <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Горячий чай у костра"/>
         <div class="ride-card-body">
           <h3>☕ Чай + хот дог у костра</h3>
@@ -510,12 +504,12 @@
 <!-- SERVICES -->
 <section class="services-section py-20 px-4" id="services">
   <div style="max-width:1100px;margin:0 auto;text-align:center;">
-    <span class="section-eyebrow reveal">Наши услуги</span>
-    <h2 class="section-title reveal reveal-delay-1">Выберите свой формат</h2>
-    <div class="gold-line reveal reveal-delay-2"></div>
+    <span class="section-eyebrow" data-aos="fade-up">Наши услуги</span>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Выберите свой формат</h2>
+    <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:0.5rem;">
 
-      <div class="price-card reveal reveal-delay-1">
+      <div class="price-card" data-aos="fade-up" data-aos-delay="0">
         <div class="price-icon">🐴</div>
         <h3>Конная прогулка</h3>
         <span class="price-label">Основная услуга</span>
@@ -531,7 +525,7 @@
         <a href="https://wa.me/77024175882" class="btn-book" target="_blank">Записаться</a>
       </div>
 
-      <div class="price-card featured reveal reveal-delay-2">
+      <div class="price-card featured" data-aos="fade-up" data-aos-delay="100">
         <div class="price-badge">Хит</div>
         <div class="price-icon">🏔️</div>
         <h3>Конный тур</h3>
@@ -548,7 +542,7 @@
         <a href="https://wa.me/77024175882" class="btn-book outline" target="_blank">Записаться</a>
       </div>
 
-      <div class="price-card reveal reveal-delay-3">
+      <div class="price-card" data-aos="fade-up" data-aos-delay="200">
         <div class="price-icon">📸</div>
         <h3>Видеосъёмка</h3>
         <span class="price-label">Профессиональное</span>
@@ -564,7 +558,7 @@
         <a href="https://wa.me/77024175882" class="btn-book" target="_blank">Записаться</a>
       </div>
 
-      <div class="price-card reveal">
+      <div class="price-card" data-aos="fade-up" data-aos-delay="0">
         <div class="price-icon">🏹</div>
         <h3>Обучение стрельбе</h3>
         <span class="price-label">Индивидуально / группа</span>
@@ -580,7 +574,7 @@
         <a href="https://wa.me/77024175882" class="btn-book" target="_blank">Записаться</a>
       </div>
 
-      <div class="price-card reveal reveal-delay-1">
+      <div class="price-card" data-aos="fade-up" data-aos-delay="100">
         <div class="price-icon">🐎</div>
         <h3>Обучение верховой езде</h3>
         <span class="price-label">Обучение (ВЕ)</span>
@@ -596,7 +590,7 @@
         <a href="https://wa.me/77024175882" class="btn-book" target="_blank">Записаться</a>
       </div>
 
-      <div class="price-card reveal reveal-delay-2">
+      <div class="price-card" data-aos="fade-up" data-aos-delay="200">
         <div class="price-icon">🎪</div>
         <h3>Тимбилдинг</h3>
         <span class="price-label">Для компаний</span>
@@ -619,31 +613,31 @@
 <!-- GALLERY -->
 <section style="background:#fff;padding:5rem 1rem;" id="gallery">
   <div style="max-width:1100px;margin:0 auto;text-align:center;">
-    <span class="section-eyebrow reveal">Галерея</span>
-    <h2 class="section-title reveal reveal-delay-1">Ваши моменты с нами</h2>
-    <div class="gold-line reveal reveal-delay-2"></div>
-    <div class="gallery-grid reveal reveal-delay-1">
-      <div class="gallery-item tall">
+    <span class="section-eyebrow" data-aos="fade-up">Галерея</span>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Ваши моменты с нами</h2>
+    <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall" data-aos="fade-up" data-aos-delay="0">
         <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=700&q=80" alt="Лошадь"/>
         <div class="gallery-overlay"><span>Наши лошади</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
         <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600&q=80" alt="Конная прогулка"/>
         <div class="gallery-overlay"><span>Конная прогулка</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Закат"/>
         <div class="gallery-overlay"><span>Закат в горах</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
         <img src="https://images.unsplash.com/photo-1443891522184-ffd4b5d7bb04?w=600&q=80" alt="Лошадь крупно"/>
         <div class="gallery-overlay"><span>Красавцы</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="250">
         <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" alt="Степь"/>
         <div class="gallery-overlay"><span>Горные тропы</span></div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="350">
         <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt="Лошадь и закат"/>
         <div class="gallery-overlay"><span>Вид на город</span></div>
       </div>
@@ -659,28 +653,28 @@
 <!-- JOBS -->
 <section class="jobs-section py-20 px-4" id="jobs">
   <div style="max-width:1100px;margin:0 auto;text-align:center;">
-    <span class="section-eyebrow reveal">Карьера</span>
-    <h2 class="section-title reveal reveal-delay-1">Присоединяйтесь к команде</h2>
-    <div class="gold-line reveal reveal-delay-2"></div>
-    <p class="reveal" style="color:#666;max-width:560px;margin:0 auto 2.5rem;font-size:0.95rem;line-height:1.7;">
+    <span class="section-eyebrow" data-aos="fade-up">Карьера</span>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Присоединяйтесь к команде</h2>
+    <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
+    <p data-aos="fade-up" data-aos-delay="250" style="color:#666;max-width:560px;margin:0 auto 2.5rem;font-size:0.95rem;line-height:1.7;">
       Мы ищем конника-инструктора в команду единомышленников, влюблённых в природу и лошадей. Работа в горах, на свежем воздухе — от 8 000 до 15 000₸ в день.
     </p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-bottom:2.5rem;">
-      <div class="job-card reveal reveal-delay-1">
+      <div class="job-card" data-aos="fade-up" data-aos-delay="0">
         <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80" alt="Работа с лошадьми"/>
         <div class="job-card-body">
           <h3>🐎 Конник-инструктор</h3>
           <p>Тары-Аюсай и Санаторий Ак Бастау. Умеешь и любишь работать с лошадьми — ты нам нужен!</p>
         </div>
       </div>
-      <div class="job-card reveal reveal-delay-2">
+      <div class="job-card" data-aos="fade-up" data-aos-delay="150">
         <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80" alt="Команда"/>
         <div class="job-card-body">
           <h3>📸 Контент-мейкер</h3>
           <p>Снимаешь красивые видео и фото? Работа на свежем воздухе с красивыми лошадьми ждёт тебя.</p>
         </div>
       </div>
-      <div class="job-card reveal reveal-delay-3">
+      <div class="job-card" data-aos="fade-up" data-aos-delay="300">
         <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80" alt="Природа"/>
         <div class="job-card-body">
           <h3>🌿 Гид по горным турам</h3>
@@ -688,7 +682,7 @@
         </div>
       </div>
     </div>
-    <div style="background:linear-gradient(135deg,var(--emerald-dark),var(--emerald));border-radius:1.5rem;padding:2.5rem;max-width:600px;margin:0 auto;color:#fff;" class="reveal">
+    <div style="background:linear-gradient(135deg,var(--emerald-dark),var(--emerald));border-radius:1.5rem;padding:2.5rem;max-width:600px;margin:0 auto;color:#fff;" data-aos="zoom-in" data-aos-delay="100">
       <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:0.75rem;">Оплата: 8 000 — 15 000₸ / день</h3>
       <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.5rem;">Дружный коллектив · Атмосфера уважения · Перспектива роста</p>
       <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
@@ -708,7 +702,7 @@
   <div style="max-width:1100px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="contact-grid">
       <!-- Left info -->
-      <div class="reveal">
+      <div data-aos="fade-right" data-aos-duration="800">
         <span class="section-eyebrow" style="color:var(--gold-light);">Свяжитесь с нами</span>
         <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:1rem;">
           Запишитесь на<br/>прогулку сегодня
@@ -764,7 +758,7 @@
       </div>
 
       <!-- Right form -->
-      <div class="form-card reveal reveal-delay-2">
+      <div class="form-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
         <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--emerald-dark);margin-bottom:0.5rem;">Оставьте заявку</h3>
         <p style="color:#777;font-size:0.85rem;margin-bottom:2rem;">Мы свяжемся с вами в течение 30 минут</p>
 
@@ -823,14 +817,14 @@
 </footer>
 
 <script>
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); }
-    });
-  }, { threshold: 0.12 });
-  reveals.forEach(r => observer.observe(r));
+  // Init AOS
+  AOS.init({
+    duration: 750,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 80,
+    disable: false
+  });
 
   // Smooth nav link scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
