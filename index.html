@@ -518,7 +518,7 @@ footer a{color:var(--go);text-decoration:none;}
 <!-- MUSIC PLAYER -->
 <div id="sp-hint">🎵 <b>Нажмите в любом месте</b> — и музыка зазвучит!</div>
 <div id="saq-player" class="closed">
-  <button id="sp-main" onclick="spClick()" title="Включить музыку">🎵</button>
+  <button id="sp-main" onclick="spMainClick()" title="Включить музыку">🎵</button>
   <div class="sp-body">
     <div class="sp-title" id="sp-title">Дух степей</div>
     <div class="sp-meta">SAQ Music &nbsp;·&nbsp; <span id="sp-time">0:00</span></div>
@@ -526,9 +526,9 @@ footer a{color:var(--go);text-decoration:none;}
   </div>
   <div class="sp-right">
     <div class="sp-eq off" id="sp-eq"><span></span><span></span><span></span></div>
-    <button class="sp-ico" id="sp-mute" onclick="spMute()" title="Заглушить">🔊</button>
-    <input type="range" id="sp-vol" min="0" max="100" value="45" oninput="spVol(this.value)"/>
-    <button class="sp-ico" onclick="spClose()" title="Свернуть">✕</button>
+    <button class="sp-ico" id="sp-mute" onclick="spToggleMute()" title="Заглушить">🔊</button>
+    <input type="range" id="sp-vol" min="0" max="100" value="45" oninput="spSetVol(this.value)"/>
+    <button class="sp-ico" onclick="spCollapse()" title="Свернуть">✕</button>
   </div>
 </div>
 <audio id="sp-audio" preload="none" loop
@@ -624,9 +624,9 @@ en:{
   'hero.cta':'Book a Ride','hero.more':'Learn More',
   'ab.eye':'About Us','ab.title':'Where the steppe<br/>spirit lives',
   'ch.r':'Horse Rides','ch.a':'Archery','ch.v':'Video Shooting','ch.e':'Ethnic Costumes','ch.c':'Movie Night by Fire','ch.t':'Mountain Tours',
-  'ri.eye':'What\'s included','ri.title':'Full Experience Package',
+  'ri.eye':'What's included','ri.title':'Full Experience Package',
   'ri.c1':'🐎 Horse Ride','ri.c1d':'A scenic horseback ride through beautiful hills with mountain and city views.',
-  'ri.c2':'🏹 Archery','ri.c2d':'Try the ancient Kazakh art under guidance of an experienced instructor.',
+  'ri.c2':'🏹 Archery','ri.c2d':'Try the ancient Kazakh art under the guidance of an experienced instructor.',
   'ri.c3':'👘 Ethnic Costumes','ri.c3d':'Dress in traditional Kazakh costumes for unforgettable photos.',
   'ri.c4':'☕ Tea + Hot Dog by Fire','ri.c4d':'Hot tea and hot dog by the open fire after the ride.',
   'sv.eye':'Our Services','sv.title':'Choose Your Format',
@@ -637,112 +637,32 @@ en:{
   'sv.5':'Horse Riding Lessons','sv.5l':'Equestrian Training','sv.5s':'Per session','sv.5f1':'Beginner to advanced','sv.5f2':'Experienced instructor','sv.5f3':'Well-groomed horses','sv.5f4':'Individual approach','sv.5f5':'Group and private lessons',
   'sv.6':'Team Building','sv.6l':'For Companies','sv.6p':'On request','sv.6s':'From 5 people','sv.6f1':'Equestrian team activities','sv.6f2':'Timed archery','sv.6f3':'Horse show','sv.6f4':'Buffet and bonfire','sv.6f5':'Corporate photo/video',
   'badge.h':'Top','btn.bk':'Book Now','btn.ds':'Discuss',
-  'gl.eye�у','ride.title':'Полный пакет впечатлений',
-    'ride.c1.title':'🐎 Конная прогулка','ride.c1.desc':'Верховая прогулка по живописным холмам с красивым видом на горы и город.',
-    'ride.c2.title':'🏹 Стрельба из лука','ride.c2.desc':'Попробуйте древнее казахское искусство под руководством опытного инструктора.',
-    'ride.c3.title':'👘 Этнонаряды','ride.c3.desc':'Облачитесь в традиционные казахские костюмы для незабываемых фотографий.',
-    'ride.c4.title':'☕ Чай + хот дог у костра','ride.c4.desc':'Горячий чай и хот дог у открытого огня — тепло и уют после прогулки.',
-    'services.eyebrow':'Наши услуги','services.title':'Выберите свой формат',
-    'svc.s1.name':'Конная прогулка','svc.s1.label':'Основная услуга','svc.s1.sub':'За человека / 1 час','svc.s1.f1':'Инструктор в комплекте','svc.s1.f2':'Стрельба из лука','svc.s1.f3':'Этнонаряды','svc.s1.f4':'Горячий чай у костра','svc.s1.f5':'Съёмка на ваш телефон',
-    'svc.s2.name':'Конный тур','svc.s2.label':'Расширенный формат','svc.s2.sub':'За человека / полдня','svc.s2.f1':'Горный маршрут','svc.s2.f2':'Все включено из базового','svc.s2.f3':'Киновечер под открытым небом','svc.s2.f4':'Этнонаряды + фотосессия','svc.s2.f5':'Профессиональная съёмка',
-    'svc.s3.name':'Видеосъёмка','svc.s3.label':'Профессиональное','svc.s3.sub':'Профессиональная съёмка','svc.s3.f1':'Видеосъёмка на лошади','svc.s3.f2':'Фото в этнонаряде','svc.s3.f3':'Монтаж и обработка','svc.s3.f4':'Готовый контент для соцсетей','svc.s3.f5':'Красивый вид на горы и город',
-    'svc.s4.name':'Обучение стрельбе','svc.s4.label':'Индивидуально / группа','svc.s4.sub':'За человека / урок','svc.s4.f1':'Базовый курс лучника','svc.s4.f2':'Традиционный казахский лук','svc.s4.f3':'Инструктор по лучной стрельбе','svc.s4.f4':'Для детей и взрослых','svc.s4.f5':'Сертификат участника',
-    'svc.s5.name':'Обучение верховой езде','svc.s5.label':'Обучение (ВЕ)','svc.s5.sub':'За занятие','svc.s5.f1':'Для начинающих и продвинутых','svc.s5.f2':'Опытный инструктор ВЕ','svc.s5.f3':'Ухоженные лошади','svc.s5.f4':'Индивидуальный подход','svc.s5.f5':'Группы и личные занятия',
-    'svc.s6.name':'Тимбилдинг','svc.s6.label':'Для компаний','svc.s6.price':'По запросу','svc.s6.sub':'От 5 человек','svc.s6.f1':'Конные активности для команды','svc.s6.f2':'Стрельба из лука на время','svc.s6.f3':'Конное шоу','svc.s6.f4':'Фуршет и костёр','svc.s6.f5':'Корпоративное фото/видео',
-    'badge.hit':'Хит','btn.book':'Записаться','btn.discuss':'Обсудить',
-    'gallery.eyebrow':'Галерея','gallery.title':'Ваши моменты с нами','gallery.ig':'📸 Больше фото в Instagram',
-    'g.0':'Наши лошади','g.1':'Конная прогулка','g.2':'Закат в горах','g.3':'Красавцы','g.4':'Горные тропы','g.5':'Вид на город',
-    'jobs.eyebrow':'Карьера','jobs.title':'Присоединяйтесь к команде','jobs.desc':'Мы ищем конника-инструктора в команду единомышленников, влюблённых в природу и лошадей. Работа в горах, на свежем воздухе — от 8 000 до 15 000₸ в день.',
-    'jobs.j1.title':'🐎 Конник-инструктор','jobs.j1.desc':'Тары-Аюсай и Санаторий Ак Бастау. Умеешь и любишь работать с лошадьми — ты нам нужен!',
-    'jobs.j2.title':'📸 Контент-мейкер','jobs.j2.desc':'Снимаешь красивые видео и фото? Работа на свежем воздухе с красивыми лошадьми ждёт тебя.',
-    'jobs.j3.title':'🌿 Гид по горным турам','jobs.j3.desc':'Любишь горы и хочешь делиться знаниями? Дружный коллектив и перспектива роста!',
-    'jobs.salary.label':'Оплата:','jobs.perks':'Дружный коллектив · Атмосфера уважения · Перспектива роста','jobs.wa':'📲 Написать в WhatsApp',
-    'contact.eyebrow':'Свяжитесь с нами','contact.title':'Запишитесь на<br/>прогулку сегодня',
-    'contact.addr.label':'Адрес','contact.phone1.label':'Основной номер','contact.phone2.label':'Доп. номер','contact.hours.label':'Режим работы',
-    'form.title':'Оставьте заявку','form.sub':'Мы свяжемся с вами в течение 30 минут','form.name':'Ваше имя','form.phone':'Телефон','form.service':'Услуга','form.choose':'Выберите услугу...','form.msg':'Сообщение','form.send':'📲 Отправить через WhatsApp','form.consent':'Нажимая кнопку, вы соглашаетесь с условиями обработки данных',
-    'form.ph.name':'Айгерим Сейткали','form.ph.msg':'Расскажите о вашем запросе, количестве человек или дате...'
-  },
-  kz: {
-    'nav.about':'Біз туралы','nav.ride':'Серуен','nav.services':'Қызметтер','nav.gallery':'Галерея','nav.contact':'Байланыс','nav.cta':'WhatsApp',
-    'admin.btn':'Редактор',
-    'hero.cta':'Тіркелу','hero.more':'Толығырақ',
-    'about.eyebrow':'Біз туралы','about.title':'Мұнда дала рухы<br/>тіршілік етеді',
-    'chips.ride':'Ат серуені','chips.archery':'Садақ ату','chips.video':'Бейнежазу','chips.ethnic':'Этно киімдер','chips.cinema':'Отты кино кеші','chips.tours':'Тау турлары',
-    'ride.eyebrow':'Серуенге не кіреді','ride.title':'Толық тәжірибе пакеті',
-    'ride.c1.title':'🐎 Ат серуені','ride.c1.desc':'Тау мен қала көрінісімен жағымды жерлер арқылы ат серуені.',
-    'ride.c2.title':'🏹 Садақ ату','ride.c2.desc':'Тәжірибелі нұсқаушы басшылығымен ежелгі қазақ өнерін сынаңыз.',
-    'ride.c3.title':'👘 Этно киімдер','ride.c3.desc':'Ұмытылмас суреттер үшін дәстүрлі қазақ киімдерін киіңіз.',
-    'ride.c4.title':'☕ Шай + от жанында хот-дог','ride.c4.desc':'Ашық отта ыстық шай мен хот-дог — серуеннен кейінгі жылы үй жайлылығы.',
-    'services.eyebrow':'Біздің қызметтер','services.title':'Өз форматыңызды таңдаңыз',
-    'svc.s1.name':'Ат серуені','svc.s1.label':'Негізгі қызмет','svc.s1.sub':'Адам / 1 сағат','svc.s1.f1':'Нұсқаушы кіреді','svc.s1.f2':'Садақ ату','svc.s1.f3':'Этно киімдер','svc.s1.f4':'Отта ыстық шай','svc.s1.f5':'Телефонға түсіру',
-    'svc.s2.name':'Ат туры','svc.s2.label':'Кеңейтілген формат','svc.s2.sub':'Адам / жарты күн','svc.s2.f1':'Тау маршруты','svc.s2.f2':'Негізгіден бәрі кіреді','svc.s2.f3':'Ашық аспан астында кино','svc.s2.f4':'Этно киімдер + фотосессия','svc.s2.f5':'Кәсіби түсіру',
-    'svc.s3.name':'Бейнежазу','svc.s3.label':'Кәсіби','svc.s3.sub':'Кәсіби түсіру','svc.s3.f1':'Атта бейне түсіру','svc.s3.f2':'Этно киімде фото','svc.s3.f3':'Монтаж және өңдеу','svc.s3.f4':'Әлеуметтік желілерге контент','svc.s3.f5':'Тау мен қала көрінісі',
-    'svc.s4.name':'Садақ ату оқыту','svc.s4.label':'Жеке / топ','svc.s4.sub':'Адам / сабақ','svc.s4.f1':'Садақшының базалық курсы','svc.s4.f2':'Дәстүрлі қазақ садағы','svc.s4.f3':'Садақ ату нұсқаушысы','svc.s4.f4':'Балалар мен ересектерге','svc.s4.f5':'Қатысушы сертификаты',
-    'svc.s5.name':'Ат мінуге үйрету','svc.s5.label':'Үйрету (ВЕ)','svc.s5.sub':'Сабақ үшін','svc.s5.f1':'Жаңадан бастаушылар мен тәжірибелілерге','svc.s5.f2':'Тәжірибелі нұсқаушы','svc.s5.f3':'Күтімдегі жылқылар','svc.s5.f4':'Жеке тәсіл','svc.s5.f5':'Топ және жеке сабақтар',
-    'svc.s6.name':'Тимбилдинг','svc.s6.label':'Компаниялар үшін','svc.s6.price':'Сұрау бойынша','svc.s6.sub':'5 адамнан','svc.s6.f1':'Команда үшін ат белсенділіктері','svc.s6.f2':'Уақытқа садақ ату','svc.s6.f3':'Ат шоу','svc.s6.f4':'Фуршет және от','svc.s6.f5':'Корпоративті фото/бейне',
-    'badge.hit':'Хит','btn.book':'Тіркелу','btn.discuss':'Талқылау',
-    'gallery.eyebrow':'Галерея','gallery.title':'Сіздің бізбен сәттеріңіз','gallery.ig':'📸 Instagramda көбірек фото',
-    'g.0':'Біздің жылқылар','g.1':'Ат серуені','g.2':'Тауда күн батысы','g.3':'Сұлу жылқылар','g.4':'Тау жолдары','g.5':'Қала көрінісі',
-    'jobs.eyebrow':'Мансап','jobs.title':'Командаға қосылыңыз','jobs.desc':'Табиғат пен жылқыны жақсы көретін командаға конник-нұсқаушы іздейміз. Таудағы жұмыс, таза ауада — күніне 8 000-нен 15 000₸-ге дейін.',
-    'jobs.j1.title':'🐎 Конник-нұсқаушы','jobs.j1.desc':'Тары-Аюсай мен Ақ Бастау санаторийі. Жылқымен жұмыс істей білсеңіз — сіз бізге керексіз!',
-    'jobs.j2.title':'📸 Контент-мейкер','jobs.j2.desc':'Сұлу бейне мен фото түсіресіз бе? Таза ауада сұлу жылқылармен жұмыс күтеді.',
-    'jobs.j3.title':'🌿 Тау туры гиді','jobs.j3.desc':'Тауды жақсы көресіз бе? Ынтымақты ұжым мен өсу перспективасы!',
-    'jobs.salary.label':'Төлем:','jobs.perks':'Ынтымақты ұжым · Сыйластық атмосферасы · Өсу перспективасы','jobs.wa':'📲 WhatsApp-қа жазу',
-    'contact.eyebrow':'Бізбен байланысыңыз','contact.title':'Бүгін серуенге<br/>тіркеліңіз',
-    'contact.addr.label':'Мекенжай','contact.phone1.label':'Негізгі нөмір','contact.phone2.label':'Қосымша нөмір','contact.hours.label':'Жұмыс режимі',
-    'form.title':'Өтінім қалдырыңыз','form.sub':'30 минут ішінде хабарласамыз','form.name':'Сіздің атыңыз','form.phone':'Телефон','form.service':'Қызмет','form.choose':'Қызметті таңдаңыз...','form.msg':'Хабарлама','form.send':'📲 WhatsApp арқылы жіберу','form.consent':'Түймені басу арқылы деректерді өңдеу шарттарымен келісесіз',
-    'form.ph.name':'Айгерім Сейтқали','form.ph.msg':'Сұранысыңыз, адам саны немесе күн туралы айтыңыз...'
-  },
-  en: {
-    'nav.about':'About','nav.ride':'Ride','nav.services':'Services','nav.gallery':'Gallery','nav.contact':'Contact','nav.cta':'WhatsApp',
-    'admin.btn':'Editor',
-    'hero.cta':'Book a Ride','hero.more':'Learn More',
-    'about.eyebrow':'About Us','about.title':'Where the steppe<br/>spirit lives',
-    'chips.ride':'Horse Rides','chips.archery':'Archery','chips.video':'Video Shooting','chips.ethnic':'Ethnic Costumes','chips.cinema':'Movie Night by Fire','chips.tours':'Mountain Tours',
-    'ride.eyebrow':'What's included','ride.title':'Full Experience Package',
-    'ride.c1.title':'🐎 Horse Ride','ride.c1.desc':'A scenic horseback ride through beautiful hills with stunning mountain and city views.',
-    'ride.c2.title':'🏹 Archery','ride.c2.desc':'Try the ancient Kazakh art under the guidance of an experienced instructor.',
-    'ride.c3.title':'👘 Ethnic Costumes','ride.c3.desc':'Dress up in traditional Kazakh costumes for unforgettable photos.',
-    'ride.c4.title':'☕ Tea + Hot Dog by Fire','ride.c4.desc':'Hot tea and hot dog by the open fire — warmth and comfort after the ride.',
-    'services.eyebrow':'Our Services','services.title':'Choose Your Format',
-    'svc.s1.name':'Horse Ride','svc.s1.label':'Main Service','svc.s1.sub':'Per person / 1 hour','svc.s1.f1':'Instructor included','svc.s1.f2':'Archery','svc.s1.f3':'Ethnic Costumes','svc.s1.f4':'Hot tea by the fire','svc.s1.f5':'Shooting on your phone',
-    'svc.s2.name':'Horse Tour','svc.s2.label':'Extended Format','svc.s2.sub':'Per person / half day','svc.s2.f1':'Mountain route','svc.s2.f2':'All basic included','svc.s2.f3':'Outdoor movie night','svc.s2.f4':'Ethnic costumes + photoshoot','svc.s2.f5':'Professional filming',
-    'svc.s3.name':'Video Shooting','svc.s3.label':'Professional','svc.s3.sub':'Professional filming','svc.s3.f1':'Video on horseback','svc.s3.f2':'Photo in ethnic costume','svc.s3.f3':'Editing and processing','svc.s3.f4':'Ready content for social media','svc.s3.f5':'Beautiful mountain & city views',
-    'svc.s4.name':'Archery Training','svc.s4.label':'Individual / Group','svc.s4.sub':'Per person / lesson','svc.s4.f1':'Basic archer course','svc.s4.f2':'Traditional Kazakh bow','svc.s4.f3':'Archery instructor','svc.s4.f4':'For kids and adults','svc.s4.f5':'Participation certificate',
-    'svc.s5.name':'Horse Riding Lessons','svc.s5.label':'Equestrian Training','svc.s5.sub':'Per session','svc.s5.f1':'Beginner to advanced','svc.s5.f2':'Experienced instructor','svc.s5.f3':'Well-groomed horses','svc.s5.f4':'Individual approach','svc.s5.f5':'Group and private lessons',
-    'svc.s6.name':'Team Building','svc.s6.label':'For Companies','svc.s6.price':'On request','svc.s6.sub':'From 5 people','svc.s6.f1':'Equestrian team activities','svc.s6.f2':'Timed archery','svc.s6.f3':'Horse show','svc.s6.f4':'Buffet and bonfire','svc.s6.f5':'Corporate photo/video',
-    'badge.hit':'Top','btn.book':'Book Now','btn.discuss':'Discuss',
-    'gallery.eyebrow':'Gallery','gallery.title':'Your moments with us','gallery.ig':'📸 More photos on Instagram',
-    'g.0':'Our horses','g.1':'Horse ride','g.2':'Sunset in the mountains','g.3':'Beautiful horses','g.4':'Mountain trails','g.5':'City view',
-    'jobs.eyebrow':'Careers','jobs.title':'Join Our Team','jobs.desc':'We are looking for an equestrian instructor to join a team of like-minded people who love nature and horses. Work in the mountains, fresh air — 8,000 to 15,000₸ per day.',
-    'jobs.j1.title':'🐎 Horse Instructor','jobs.j1.desc':'Tary-Ayusai and Ak Bastau Sanatorium. Can you work with horses? We need you!',
-    'jobs.j2.title':'📸 Content Creator','jobs.j2.desc':'Do you shoot beautiful videos and photos? Work outdoors with beautiful horses awaits you.',
-    'jobs.j3.title':'🌿 Mountain Tour Guide','jobs.j3.desc':'Love mountains and want to share your knowledge? Friendly team and growth prospects!',
-    'jobs.salary.label':'Salary:','jobs.perks':'Friendly team · Respectful atmosphere · Growth prospects','jobs.wa':'📲 Message on WhatsApp',
-    'contact.eyebrow':'Contact Us','contact.title':'Book your ride<br/>today',
-    'contact.addr.label':'Address','contact.phone1.label':'Main Number','contact.phone2.label':'Alt. Number','contact.hours.label':'Working Hours',
-    'form.title':'Leave a Request','form.sub':'We'll contact you within 30 minutes','form.name':'Your Name','form.phone':'Phone','form.service':'Service','form.choose':'Choose a service...','form.msg':'Message','form.send':'📲 Send via WhatsApp','form.consent':'By clicking the button you agree to the data processing terms',
-    'form.ph.name':'Your name','form.ph.msg':'Tell us about your request, number of people or date...'
-  }
+  'gl.eye':'Gallery','gl.title':'Your moments with us','gl.ig':'📸 More photos on Instagram',
+  'gl.0':'Our horses','gl.1':'Horse ride','gl.2':'Sunset in the mountains','gl.3':'Beautiful horses','gl.4':'Mountain trails','gl.5':'City view',
+  'jb.eye':'Careers','jb.title':'Join Our Team','jb.desc':'We are looking for an equestrian instructor to join a team of like-minded people who love nature and horses. Work in the mountains, fresh air.',
+  'jb.j1':'🐎 Horse Instructor','jb.j1d':'Tary-Ayusai and Ak Bastau Sanatorium. Can you work with horses? We need you!',
+  'jb.j2':'📸 Content Creator','jb.j2d':'Do you shoot beautiful videos and photos? Work outdoors awaits you.',
+  'jb.j3':'🌿 Mountain Tour Guide','jb.j3d':'Love mountains and want to share your knowledge? Friendly team!',
+  'jb.sl':'Salary:','jb.perks':'Friendly team · Respectful atmosphere · Growth prospects','jb.wa':'📲 Message on WhatsApp',
+  'cn.eye':'Contact Us','cn.title':'Book your ride<br/>today','cn.al':'Address','cn.p1l':'Main Number','cn.p2l':'Alt. Number','cn.hl':'Working Hours',
+  'fm.title':'Leave a Request','fm.sub':'We'll contact you within 30 minutes','fm.name':'Your Name','fm.phone':'Phone','fm.svc':'Service','fm.ch':'Choose a service...','fm.msg':'Message','fm.send':'📲 Send via WhatsApp','fm.consent':'By clicking the button you agree to the data processing terms'
+}
 };
 
 let currentLang = 'ru';
 
 function setLang(lang) {
   currentLang = lang;
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent === lang.toUpperCase()));
-  const t = TRANSLATIONS[lang];
-  // Text nodes
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('on', b.textContent === lang.toUpperCase()));
+  const t = T[lang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if(t[key] !== undefined) el.innerHTML = t[key];
   });
-  // Placeholders
   document.querySelectorAll('[data-placeholder-i18n]').forEach(el => {
     const key = el.getAttribute('data-placeholder-i18n');
     if(t[key] !== undefined) el.placeholder = t[key];
   });
-  // Page title
   const titles = { ru:'SAQ by Qundyz — Конные прогулки в Алматы', kz:'SAQ by Qundyz — Алматыдағы ат серуені', en:'SAQ by Qundyz — Horse Rides in Almaty' };
   document.getElementById('page-title').textContent = titles[lang];
 }
@@ -774,46 +694,46 @@ const DEFAULT_CFG = {
 
 let cfg = JSON.parse(JSON.stringify(DEFAULT_CFG));
 
-// Build gallery fields in admin
 function buildGalleryFields(){
-  const c = document.getElementById('gallery-fields');
+  const c = document.getElementById('gal-fields');
   c.innerHTML = '';
   cfg.gallery.forEach((url,i)=>{
     c.innerHTML += `
-      <div class="admin-divider">Фото ${i+1}</div>
-      <div class="admin-field">
+      <div class="adm-div">Фото ${i+1}</div>
+      <div class="adm-f">
         <label>URL</label>
-        <input id="gf-${i}" value="${url}" oninput="previewImg(this,'gp-${i}')"/>
-        <img id="gp-${i}" class="img-preview ${url?'loaded':''}"/>
+        <input id="gf-${i}" value="${url}" oninput="prevImg(this,'gp-${i}')"/>
+        <img id="gp-${i}" class="img-prev ${url?'show':''}"/>
       </div>`;
   });
-  // Set preview src after render
   setTimeout(()=>{
     cfg.gallery.forEach((url,i)=>{
       const img = document.getElementById('gp-'+i);
-      if(img && url){ img.src=url; img.classList.add('loaded'); }
+      if(img && url){ img.src=url; img.classList.add('show'); }
     });
   },0);
 }
 
-function toggleAdmin(){
-  const p = document.getElementById('admin-panel');
-  const o = document.getElementById('admin-overlay');
-  const open = p.classList.toggle('open');
-  o.classList.toggle('show', open);
-  if(open){ syncAdminFields(); buildGalleryFields(); }
+function admOpen(){
+  const p = document.getElementById('adm-panel'), o = document.getElementById('adm-overlay');
+  p.classList.add('open'); o.classList.add('show');
+  syncAdminFields(); buildGalleryFields();
+}
+function admClose(){
+  document.getElementById('adm-panel').classList.remove('open');
+  document.getElementById('adm-overlay').classList.remove('show');
 }
 
 function syncAdminFields(){
   const ids = {
-    'ad-hero-line1':'heroLine1','ad-hero-line2':'heroLine2','ad-hero-badge':'heroBadge','ad-hero-sub':'heroSub',
-    'ad-stat1-num':'stat1Num','ad-stat1-lbl':'stat1Lbl','ad-stat2-num':'stat2Num','ad-stat2-lbl':'stat2Lbl','ad-stat3-num':'stat3Num','ad-stat3-lbl':'stat3Lbl',
-    'ad-about1':'about1','ad-about2':'about2',
-    'ad-wa1':'wa1','ad-wa2':'wa2','ad-address':'address','ad-hours':'hours',
-    'ad-ig':'ig','ad-tt':'tt','ad-2gis':'twoGis',
-    'ad-hero-img':'heroImg','ad-about-img':'aboutImg',
-    'ad-p1':'prices.0','ad-p2':'prices.1','ad-p3':'prices.2','ad-p4':'prices.3','ad-p5':'prices.4',
-    'ad-salary':'salary'
+    'a-h1':'heroLine1','a-h2':'heroLine2','a-hb':'heroBadge','a-hs':'heroSub',
+    'a-s1n':'stat1Num','a-s1l':'stat1Lbl','a-s2n':'stat2Num','a-s2l':'stat2Lbl','a-s3n':'stat3Num','a-s3l':'stat3Lbl',
+    'a-ab1':'about1','a-ab2':'about2',
+    'a-w1':'wa1','a-w2':'wa2','a-addr':'address','a-hrs':'hours',
+    'a-ig':'ig','a-tt':'tt','a-2g':'twoGis',
+    'a-hi':'heroImg','a-ai':'aboutImg',
+    'a-p1':'prices.0','a-p2':'prices.1','a-p3':'prices.2','a-p4':'prices.3','a-p5':'prices.4',
+    'a-sal':'salary'
   };
   Object.entries(ids).forEach(([elId, key])=>{
     const el = document.getElementById(elId); if(!el) return;
@@ -823,274 +743,54 @@ function syncAdminFields(){
   });
 }
 
-function applyAdmin(){
-  // Read from fields
-  cfg.heroLine1 = v('ad-hero-line1'); cfg.heroLine2 = v('ad-hero-line2');
-  cfg.heroBadge = v('ad-hero-badge'); cfg.heroSub = v('ad-hero-sub');
-  cfg.stat1Num = v('ad-stat1-num'); cfg.stat1Lbl = v('ad-stat1-lbl');
-  cfg.stat2Num = v('ad-stat2-num'); cfg.stat2Lbl = v('ad-stat2-lbl');
-  cfg.stat3Num = v('ad-stat3-num'); cfg.stat3Lbl = v('ad-stat3-lbl');
-  cfg.about1 = v('ad-about1'); cfg.about2 = v('ad-about2');
-  cfg.wa1 = v('ad-wa1'); cfg.wa2 = v('ad-wa2');
-  cfg.address = v('ad-address'); cfg.hours = v('ad-hours');
-  cfg.ig = v('ad-ig'); cfg.tt = v('ad-tt'); cfg.twoGis = v('ad-2gis');
-  cfg.heroImg = v('ad-hero-img'); cfg.aboutImg = v('ad-about-img');
-  cfg.prices = [v('ad-p1'),v('ad-p2'),v('ad-p3'),v('ad-p4'),v('ad-p5')];
-  cfg.salary = v('ad-salary');
+function admApply(){
+  cfg.heroLine1 = val('a-h1'); cfg.heroLine2 = val('a-h2');
+  cfg.heroBadge = val('a-hb'); cfg.heroSub = val('a-hs');
+  cfg.stat1Num = val('a-s1n'); cfg.stat1Lbl = val('a-s1l');
+  cfg.stat2Num = val('a-s2n'); cfg.stat2Lbl = val('a-s2l');
+  cfg.stat3Num = val('a-s3n'); cfg.stat3Lbl = val('a-s3l');
+  cfg.about1 = val('a-ab1'); cfg.about2 = val('a-ab2');
+  cfg.wa1 = val('a-w1'); cfg.wa2 = val('a-w2');
+  cfg.address = val('a-addr'); cfg.hours = val('a-hrs');
+  cfg.ig = val('a-ig'); cfg.tt = val('a-tt'); cfg.twoGis = val('a-2g');
+  cfg.heroImg = val('a-hi'); cfg.aboutImg = val('a-ai');
+  cfg.prices = [val('a-p1'),val('a-p2'),val('a-p3'),val('a-p4'),val('a-p5')];
+  cfg.salary = val('a-sal');
   cfg.gallery = cfg.gallery.map((_,i)=> { const el=document.getElementById('gf-'+i); return el?el.value:_; });
-
   renderCfg();
   showToast('✅ Изменения применены!');
 }
 
-function v(id){ const el=document.getElementById(id); return el?el.value.trim():''; }
+function val(id){ const el=document.getElementById(id); return el?el.value.trim():''; }
 
 function renderCfg(){
-  // Texts
-  setText('hero-line1', cfg.heroLine1);
-  setText('hero-line2', cfg.heroLine2);
-  setText('hero-badge', cfg.heroBadge);
-  setText('hero-sub', cfg.heroSub);
-  setText('stat1-num', cfg.stat1Num); setText('stat1-lbl', cfg.stat1Lbl);
-  setText('stat2-num', cfg.stat2Num); setText('stat2-lbl', cfg.stat2Lbl);
-  setText('stat3-num', cfg.stat3Num); setText('stat3-lbl', cfg.stat3Lbl);
-  setText('about-text1', cfg.about1); setText('about-text2', cfg.about2);
-  setText('contact-address', cfg.address); setText('contact-hours', cfg.hours);
-  setText('salary-range', cfg.salary);
-  setText('footer-copy', `г. Алматы, ${cfg.address} · +7 ${fmt(cfg.wa1)}<br/>© ${new Date().getFullYear()} SAQ by Qundyz.`);
+  setText('h-l1', cfg.heroLine1); setText('h-l2', cfg.heroLine2);
+  setText('h-badge', cfg.heroBadge); setText('h-sub', cfg.heroSub);
+  setText('s1n', cfg.stat1Num); setText('s1l', cfg.stat1Lbl);
+  setText('s2n', cfg.stat2Num); setText('s2l', cfg.stat2Lbl);
+  setText('s3n', cfg.stat3Num); setText('s3l', cfg.stat3Lbl);
+  setText('ab-t1', cfg.about1); setText('ab-t2', cfg.about2);
+  setText('c-addr', cfg.address); setText('c-hrs', cfg.hours);
+  setText('sal-rng', cfg.salary);
+  setText('ft-copy', `г. Алматы, ${cfg.address} · +7 ${fmt(cfg.wa1)}<br/>© ${new Date().getFullYear()} SAQ by Qundyz.`);
 
-  // Prices
-  cfg.prices.forEach((p,i)=>setText(`price-${i+1}`, p));
+  cfg.prices.forEach((p,i)=>setText(`p${i+1}`, p));
 
-  // Hero bg
   document.querySelector('.hero').style.backgroundImage =
     `linear-gradient(135deg,rgba(27,67,50,.72) 0%,rgba(62,39,35,.5) 100%), url('${cfg.heroImg}')`;
 
-  // About img
   const ai = document.getElementById('about-img'); if(ai) ai.src = cfg.aboutImg;
 
-  // Gallery imgs
-  cfg.gallery.forEach((url,i)=>{ const img=document.getElementById('gimg-'+i); if(img&&url) img.src=url; });
+  cfg.gallery.forEach((url,i)=>{ const img=document.getElementById('gi'+i); if(img&&url) img.src=url; });
 
-  // WhatsApp links
   const wa1Url = `https://wa.me/${cfg.wa1}`;
   const wa2Url = `https://wa.me/${cfg.wa2}`;
   document.querySelectorAll('.wa-link').forEach(a=>{ a.href=wa1Url; });
-  setHref('hero-wa-btn', wa1Url);
-  setHref('contact-wa1-link', wa1Url); setHref('contact-wa2-link', wa2Url);
-  setHref('jobs-wa1-btn', wa1Url); setHref('jobs-wa2-btn', wa2Url);
-  setHref('footer-wa-btn', wa1Url); setHref('ftl-wa', wa1Url);
-  setText('contact-wa1-link', `+7 ${fmt(cfg.wa1)}`);
-  setText('contact-wa2-link', `+7 ${fmt(cfg.wa2)}`);
-  setHref('jobs-wa2-btn', wa2Url);
-  document.querySelector('#jobs-wa2-btn')&&(document.querySelector('#jobs-wa2-btn').textContent=`+7 ${fmt(cfg.wa2)}`);
-
-  // Social links
-  setHref('footer-ig-btn', cfg.ig); setHref('ig-gallery-btn', cfg.ig); setHref('footer-ig-btn', cfg.ig); setHref('ftl-ig', cfg.ig);
-  setHref('footer-tt-btn', cfg.tt); setHref('ftl-tt', cfg.tt);
-  setHref('footer-2gis-btn', cfg.twoGis); setHref('ftl-2gis', cfg.twoGis);
-  const nav_cta = document.querySelector('.nav-cta'); if(nav_cta) nav_cta.href = wa1Url;
-}
-
-function setText(id, val){ const el=document.getElementById(id); if(el) el.innerHTML=val; }
-function setHref(id, url){ const el=document.getElementById(id); if(el) el.href=url; }
-function fmt(num){ const n=num.replace(/\D/g,''); return `${n.slice(0,1)} ${n.slice(1,4)} ${n.slice(4,7)} ${n.slice(7,9)} ${n.slice(9,11)}`; }
-
-function switchTab(tabId){
-  document.querySelectorAll('.admin-section').forEach(s=>s.classList.toggle('active', s.id===tabId));
-  document.querySelectorAll('.admin-tab').forEach((btn,i)=>{
-    const tabs=['tab-texts','tab-contacts','tab-photos','tab-prices','tab-music'];
-    btn.classList.toggle('active', tabs[i]===tabId);
-  });
-}
-
-function previewImg(input, previewId){
-  const img = document.getElementById(previewId);
-  if(!img) return;
-  if(input.value){ img.src=input.value; img.classList.add('loaded'); }
-  else { img.classList.remove('loaded'); }
-}
-
-function importConfig(e){
-  const file = e.target.files[0]; if(!file) return;
-  const reader = new FileReader();
-  reader.onload = ev => {
-    try {
-      const imported = JSON.parse(ev.target.result);
-      Object.assign(cfg, imported);
-      syncAdminFields();
-      buildGalleryFields();
-      applyAdmin();
-      showToast('📤 Настройки импортированы!');
-    } catch(err) { showToast('❌ Ошибка файла JSON'); }
-  };
-  reader.readAsText(file);
-  e.target.value='';
-}
-
-function resetAdmin(){
-  if(!confirm('Сбросить все настройки к исходным?')) return;
-  cfg = JSON.parse(JSON.stringify(DEFAULT_CFG));
-  syncAdminFields(); buildGalleryFields(); renderCfg();
-  showToast('🔄 Настройки сброшены');
-}
-
-let toastTimer;
-function showToast(msg){
-  const t = document.getElementById('admin-toast');
-  t.textContent = msg; t.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(()=>t.classList.remove('show'), 2800);
-}
-
-// ═══════════════════════════════════════════
-// ═══════════════════════════════════════════
-// 🎵 MUSIC PLAYER — Smart Autoplay + localStorage
-// ═══════════════════════════════════════════
-(function(){
-  /* ── Config (also set via admin panel) ── */
-  var SP_TRACK_NAME   = 'Дух степей';
-  var SP_TRACK_ARTIST = 'SAQ Music';
-  /* ── Keys ── */
-  var LS_ON  = 'saq_mp_on';
-  var LS_VOL = 'saq_mp_vol';
-  /* ── DOM ── */
-  var audio    = document.getElementById('sp-audio');
-  var player   = document.getElementById('saq-player');
-  var mainBtn  = document.getElementById('sp-main-btn');
-  var bar      = document.getElementById('sp-bar');
-  var eq       = document.getElementById('sp-eq');
-  var hint     = document.getElementById('sp-hint');
-  var muteBtn  = document.getElementById('sp-mute-btn');
-  var volEl    = document.getElementById('sp-vol');
-  var timeEl   = document.getElementById('sp-time');
-  /* ── State ── */
-  var playing  = false;
-  var expanded = false;
-  var muted    = false;
-  var ready    = false;
-
-  /* ── Restore volume ── */
-  var savedVol = parseInt(localStorage.getItem(LS_VOL)) || 45;
-  audio.volume = savedVol / 100;
-  if(volEl) volEl.value = savedVol;
-
-  /* ── Visual: play/pause ── */
-  function setPlaying(state){
-    playing = state;
-    if(mainBtn) mainBtn.textContent = state ? '⏸' : '🎵';
-    if(eq) eq.classList.toggle('off', !state);
-  }
-
-  /* ── Expand ── */
-  function spExpand(){
-    expanded = true;
-    player.classList.remove('sp-closed'); player.classList.remove('closed');
-  }
-
-  /* ── Collapse (global) ── */
-  window.spCollapse = function(){
-    expanded = false;
-    player.classList.add('sp-closed'); player.classList.add('closed');
-  };
-
-  /* ── Main button: expand if closed, else toggle play ── */
-  window.spMainClick = function(){
-    if(!expanded){ spExpand(); return; }
-    spToggle();
-  };
-
-  /* ── Toggle play/pause ── */
-  function spToggle(){
-    if(playing){
-      audio.pause();
-      localStorage.setItem(LS_ON, '0');
-    } else {
-      audio.play().catch(function(){
-        showToast('❌ Ошибка аудио. Проверьте ссылку в Редакторе → 🎵 Музыка');
-      });
-      localStorage.setItem(LS_ON, '1');
-    }
-  }
-
-  /* ── First user gesture ── */
-  function onReady(){
-    if(ready) return;
-    ready = true;
-    /* Hide hint */
-    if(hint){ hint.classList.add('sp-hide'); setTimeout(function(){ hint.style.display='none'; }, 600); }
-    /* Auto-start: if user had music ON before, or first ever visit (null) */
-    var stored = localStorage.getItem(LS_ON);
-    if(stored === '1' || stored === null){
-      audio.play().then(function(){
-        localStorage.setItem(LS_ON, '1');
-        if(!expanded) spExpand();
-      }).catch(function(){});
-    }
-  }
-
-  /* ── Interaction listeners ── */
-  document.addEventListener('click', function(e){
-    if(player && player.contains(e.target)) return;
-    onReady();
-  }, { passive: true });
-
-  window.addEventListener('scroll', function handler(){
-    onReady();
-    window.removeEventListener('scroll', handler);
-  }, { passive: true });
-
-  document.addEventListener('touchstart', function(e){
-    if(player && player.contains(e.target)) return;
-    onReady();
-  }, { passive: true, once: true });
-
-  /* ── Volume ── */
-  window.spSetVol = function(v){
-    var n = parseInt(v);
-    audio.volume = n / 100;
-    audio.muted = n === 0;
-    muted = n === 0;
-    localStorage.setItem(LS_VOL, n);
-    if(muteBtn) muteBtn.textContent = n === 0 ? '🔇' : n < 50 ? '🔉' : '🔊';
-  };
-
-  window.spToggleMute = function(){
-    muted = !muted;
-    audio.muted = muted;
-    if(muteBtn) muteBtn.textContent = muted ? '🔇' : '🔊';
-  };
-
-  /* ── Seek ── */
-  window.spSeek = function(e){
-    if(!audio.duration) return;
-    var r = e.currentTarget.getBoundingClientRect();
-    audio.currentTime = ((e.clientX - r.left) / r.width) * audio.duration;
-  };
-
-  /* ── Progress ── */
-  audio.addEventListener('play',  function(){ setPlaying(true); });
-  audio.addEventListener('pause', function(){ setPlaying(false); });
-    audio.addEventListener('timeupdate', function(){
-    if(!audio.duration) return;
-    var pct = (audio.currentTime / audio.duration) * 100;
-    if(bar) bar.style.width = pct + '%';
-    if(timeEl){
-      var m = Math.floor(audio.currentTime/60);
-      var s = Math.floor(audio.currentTime%60);
-      timeEl.textContent = m+':'+(s<10?'0':'')+s;
-    }
-  });
-  audio.addEventListener('ended', function(){ setPlaying(false); });
-
-})();
-
-// Alias wrappers so HTML onclick="spClick()" etc. work
-window.spClick  = window.spMainClick;
-window.spMute   = window.spToggleMute;
-window.spVol    = window.spSetVol;
-window.spClose  = window.spCollapse;
-
-</script>
-</body>
-</html>
+  setHref('hero-wa', wa1Url);
+  setHref('c-w1', wa1Url); setHref('c-w2', wa2Url);
+  setHref('jb-wa1', wa1Url); setHref('jb-wa2', wa2Url);
+  setHref('s-wa', wa1Url); setHref('ft-wa', wa1Url);
+  setText('c-w1', `+7 ${fmt(cfg.wa1)}`);
+  setText('c-w2', `+7 ${fmt(cfg.wa2)}`);
+  setHref('jb-wa2', wa2Url);
+  if(document.querySelector('#jb-wa2')) document.querySelector('#jb-wa2').tex
