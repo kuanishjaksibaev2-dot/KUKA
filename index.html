@@ -18,7 +18,6 @@
 body{font-family:'Inter',sans-serif;background:var(--be);color:var(--br);overflow-x:hidden;margin:0;}
 h1,h2,h3{font-family:'Playfair Display',serif;}
 
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,175,55,.2);padding:.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:.8rem;flex-wrap:wrap;}
 .nav-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--ed);white-space:nowrap;}
 .nav-logo span{color:var(--go);}
@@ -26,20 +25,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,
 .nav-links a{font-size:.78rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--br);text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:var(--eg);}
 .nav-right{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;}
-
-/* LANG */
 .lang-sw{display:flex;gap:2px;background:rgba(45,106,79,.08);border-radius:50px;padding:3px;}
 .lang-btn{border:none;background:none;cursor:pointer;font-size:.72rem;font-weight:700;padding:.28rem .65rem;border-radius:50px;color:var(--br);transition:all .2s;}
 .lang-btn.on{background:var(--ed);color:#fff;}
-
-/* ADMIN BTN */
-.adm-btn{border:1.5px solid rgba(45,106,79,.3);background:none;border-radius:50px;padding:.3rem .8rem;font-size:.7rem;font-weight:700;color:var(--ed);cursor:pointer;transition:all .2s;white-space:nowrap;}
-.adm-btn:hover{background:var(--ed);color:#fff;border-color:var(--ed);}
-
 .nav-cta{background:var(--go);color:var(--br);padding:.42rem 1.1rem;border-radius:50px;font-size:.78rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:background .2s,transform .2s;}
 .nav-cta:hover{background:var(--gl);transform:translateY(-1px);}
 
-/* HERO */
 .hero{min-height:100vh;background:linear-gradient(135deg,rgba(27,67,50,.72),rgba(62,39,35,.5)),url('https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=1600&q=80') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,var(--be),transparent);}
 .hero-inner{position:relative;z-index:1;padding:7rem 1.5rem 4rem;max-width:760px;margin:0 auto;}
@@ -55,14 +46,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,
 .btn-ghost{border:2px solid rgba(255,255,255,.55);color:#fff;padding:.9rem 2rem;border-radius:50px;font-weight:500;font-size:.9rem;text-decoration:none;display:inline-block;margin-left:1rem;transition:all .2s;}
 .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
 
-/* SECTION COMMONS */
 .sec-eye{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--go);display:block;margin-bottom:.5rem;}
 .sec-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:700;color:var(--ed);line-height:1.15;margin-bottom:1rem;}
 .gold-line{width:52px;height:3px;background:var(--go);border-radius:2px;margin:0 auto 2.5rem;}
 .gold-line.l{margin:0 0 2.5rem;}
 .wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem;}
 
-/* ABOUT */
 .about-sec{background:#fff;padding:5rem 1.5rem;}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
 .about-img-wrap{border-radius:1.5rem;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12);position:relative;min-height:420px;}
@@ -70,7 +59,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,
 .about-badge{position:absolute;bottom:1.5rem;left:1.5rem;background:var(--go);color:var(--br);padding:.6rem 1.2rem;border-radius:50px;font-weight:700;font-size:.85rem;}
 .chip{display:inline-flex;align-items:center;gap:.4rem;background:var(--sl);border:1px solid rgba(184,216,240,.6);color:var(--ed);padding:.4rem .9rem;border-radius:50px;font-size:.78rem;font-weight:500;margin:.25rem;}
 
-/* RIDE INCLUDED */
 .ride-sec{background:var(--be);padding:5rem 1.5rem;}
 .ride-card{background:#fff;border-radius:1.2rem;box-shadow:0 4px 24px rgba(0,0,0,.07);overflow:hidden;transition:transform .3s,box-shadow .3s;}
 .ride-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.12);}
@@ -79,7 +67,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,
 .ride-card-body h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--ed);margin-bottom:.4rem;}
 .ride-card-body p{font-size:.83rem;color:#666;line-height:1.55;}
 
-/* SERVICES */
 .svc-sec{background:var(--sl);padding:5rem 1.5rem;}
 .price-card{background:#fff;border-radius:1.5rem;padding:2rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,.07);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;border:1px solid rgba(184,216,240,.4);}
 .price-card:hover{transform:scale(1.04);box-shadow:0 20px 50px rgba(0,0,0,.13);}
@@ -99,7 +86,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,
 .btn-book.out{background:transparent;border:2px solid rgba(255,255,255,.5);color:#fff;}
 .btn-book.out:hover{background:rgba(255,255,255,.1);}
 
-/* GALLERY */
 .gal-sec{background:#fff;padding:5rem 1.5rem;}
 .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;}
 .gal-item{border-radius:1rem;overflow:hidden;aspect-ratio:4/3;position:relative;}
@@ -110,7 +96,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,
 .gal-item:hover .gal-ov{opacity:1;}
 .gal-ov span{color:#fff;font-size:.78rem;font-weight:500;}
 
-/* JOBS */
 .jobs-sec{background:#fff;padding:5rem 1.5rem;}
 .job-card{background:var(--be);border:1px solid rgba(212,175,55,.2);border-radius:1.2rem;overflow:hidden;transition:transform .3s,box-shadow .3s;}
 .job-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.09);}
@@ -119,7 +104,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,
 .job-card-body h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--ed);margin-bottom:.3rem;}
 .job-card-body p{font-size:.8rem;color:#666;line-height:1.5;}
 
-/* CONTACT */
 .contact-sec{background:linear-gradient(135deg,var(--ed),var(--eg));padding:5rem 1.5rem;}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
 .form-card{background:rgba(255,255,255,.97);border-radius:2rem;padding:2.5rem 2rem;box-shadow:0 20px 60px rgba(0,0,0,.18);}
@@ -135,43 +119,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,
 .soc-tt{background:#010101;color:#fff;}
 .soc-2g{background:#1a8cff;color:#fff;}
 
-/* FOOTER */
 footer{background:var(--br);color:rgba(255,255,255,.75);text-align:center;padding:2rem;font-size:.8rem;}
 footer a{color:var(--go);text-decoration:none;}
 
-/* ADMIN PANEL */
-#adm-panel{position:fixed;top:0;right:0;bottom:0;z-index:9999;width:360px;max-width:95vw;background:#fff;box-shadow:-4px 0 40px rgba(0,0,0,.18);display:flex;flex-direction:column;transform:translateX(110%);transition:transform .38s cubic-bezier(.4,0,.2,1);border-left:3px solid var(--go);}
-#adm-panel.open{transform:translateX(0);}
-.adm-hd{background:var(--ed);color:#fff;padding:1.1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
-.adm-hd h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;}
-.adm-close{background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;line-height:1;}
-.adm-tabs{display:flex;flex-wrap:wrap;border-bottom:2px solid #eee;flex-shrink:0;}
-.adm-tab{flex:1;min-width:55px;padding:.6rem .3rem;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border:none;background:none;cursor:pointer;color:#999;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;}
-.adm-tab.on{color:var(--ed);border-bottom-color:var(--go);}
-.adm-body{flex:1;overflow-y:auto;padding:1.25rem;}
-.adm-sec{display:none;}
-.adm-sec.on{display:block;}
-.adm-f{margin-bottom:1rem;}
-.adm-f label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ed);margin-bottom:.3rem;}
-.adm-f input,.adm-f textarea,.adm-f select{width:100%;padding:.55rem .8rem;border:1.5px solid #e0e0e0;border-radius:.6rem;font-size:.85rem;color:var(--br);background:#fafafa;outline:none;transition:border-color .2s;font-family:'Inter',sans-serif;}
-.adm-f input:focus,.adm-f textarea:focus{border-color:var(--eg);background:#fff;}
-.adm-f textarea{min-height:72px;resize:vertical;}
-.adm-div{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--go);border-bottom:1px solid rgba(212,175,55,.25);padding-bottom:.4rem;margin:1.2rem 0 .8rem;}
-.adm-ft{padding:1rem 1.25rem;border-top:1px solid #eee;display:flex;flex-direction:column;gap:.6rem;flex-shrink:0;}
-.adm-abtn{width:100%;padding:.65rem;border-radius:.6rem;font-weight:700;font-size:.82rem;cursor:pointer;border:none;transition:all .2s;}
-.adm-apply{background:var(--ed);color:#fff;} .adm-apply:hover{background:var(--eg);}
-.adm-export{background:var(--go);color:var(--br);} .adm-export:hover{background:var(--gl);}
-.adm-import{background:#f1f5f9;color:var(--br);border:1.5px solid #e0e0e0;}
-.adm-reset{background:#fff0f0;color:#c0392b;border:1.5px solid #f5c6c6;}
-.adm-music{background:var(--eg);color:#fff;} .adm-music:hover{background:var(--eg);}
-.img-prev{width:100%;height:90px;object-fit:cover;border-radius:.5rem;margin-top:.4rem;display:none;border:1px solid #eee;}
-.img-prev.show{display:block;}
-#adm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:9998;display:none;opacity:0;transition:opacity .3s;}
-#adm-overlay.show{display:block;opacity:1;}
-#adm-toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ed);color:#fff;padding:.65rem 1.5rem;border-radius:50px;font-size:.82rem;font-weight:600;z-index:99999;transition:transform .35s,opacity .35s;opacity:0;pointer-events:none;white-space:nowrap;}
-#adm-toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
-
-/* MUSIC PLAYER */
 #saq-player{position:fixed;bottom:1.4rem;left:1.4rem;z-index:8000;display:flex;align-items:center;gap:.7rem;background:rgba(27,67,50,.95);backdrop-filter:blur(18px);border:1px solid rgba(212,175,55,.45);border-radius:3rem;padding:.6rem .9rem .6rem .65rem;box-shadow:0 8px 32px rgba(0,0,0,.32);transition:max-width .42s cubic-bezier(.4,0,.2,1),border-radius .42s,padding .42s;max-width:340px;min-width:52px;overflow:hidden;user-select:none;}
 #saq-player.closed{max-width:52px;padding:.65rem;border-radius:50%;}
 #saq-player.closed .sp-body,#saq-player.closed .sp-right{display:none;}
@@ -198,7 +148,6 @@ footer a{color:var(--go);text-decoration:none;}
 #sp-hint b{color:var(--go);}
 #sp-hint.hide{opacity:0;transform:translateY(8px);}
 
-/* RESPONSIVE */
 @media(max-width:900px){.nav-links{display:none;}}
 @media(max-width:768px){
   .about-grid{grid-template-columns:1fr!important;}
@@ -212,7 +161,6 @@ footer a{color:var(--go);text-decoration:none;}
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <span class="nav-logo">SAQ <span>✦</span> by Qundyz</span>
   <div class="nav-links">
@@ -228,35 +176,68 @@ footer a{color:var(--go);text-decoration:none;}
       <button class="lang-btn" onclick="setLang('kz')">KZ</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
     </div>
-    <button class="adm-btn" onclick="admOpen()">⚙️ <span data-i18n="adm.btn">Редактор</span></button>
     <a id="nav-wa" href="https://wa.me/77024175882" class="nav-cta" target="_blank">WhatsApp</a>
   </div>
 </nav>
 
-<!-- ADMIN OVERLAY -->
-<div id="adm-overlay" onclick="admClose()"></div>
-
-<!-- ADMIN PANEL -->
-<div id="adm-panel">
-  <div class="adm-hd">
-    <h3>⚙️ Панель управления</h3>
-    <button class="adm-close" onclick="admClose()">✕</button>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <span class="hero-badge" id="h-badge">✦ Алматы — ул. Ерубаева 8/10 ✦</span>
+    <h1><span id="h-l1">Конные прогулки</span><br/><em id="h-l2">SAQ by Qundyz</em></h1>
+    <p id="h-sub">Окунитесь в мир степного духа. Всего в 7 минутах от Президентского парка — незабываемые конные прогулки, стрельба из лука и этнонаряды.</p>
+    <div class="hero-stats">
+      <div class="h-stat"><span class="num" id="s1n">10 000+</span><span class="lbl" id="s1l">Довольных гостей</span></div>
+      <div class="h-stat"><span class="num" id="s2n">7+</span><span class="lbl" id="s2l">Лет опыта</span></div>
+      <div class="h-stat"><span class="num" id="s3n">7 мин</span><span class="lbl" id="s3l">От парка</span></div>
+    </div>
+    <a id="hero-wa" href="https://wa.me/77024175882" class="btn-gold" target="_blank" data-i18n="hero.cta">Записаться на прогулку</a>
+    <a href="#about" class="btn-ghost" data-i18n="hero.more">Узнать больше</a>
   </div>
-  <div class="adm-tabs">
-    <button class="adm-tab on" onclick="admTab('t-text')">📝 Тексты</button>
-    <button class="adm-tab" onclick="admTab('t-contacts')">📞 Контакты</button>
-    <button class="adm-tab" onclick="admTab('t-photos')">🖼 Фото</button>
-    <button class="adm-tab" onclick="admTab('t-prices')">💰 Цены</button>
-    <button class="adm-tab" onclick="admTab('t-music')">🎵 Музыка</button>
-  </div>
-  <div class="adm-body">
+</section>
 
-    <!-- TEXTS -->
-    <div id="t-text" class="adm-sec on">
-      <div class="adm-div">Hero секция</div>
-      <div class="adm-f"><label>Заголовок строка 1</label><input id="a-h1" value="Конные прогулки"/></div>
-      <div class="adm-f"><label>Заголовок курсив строка 2</label><input id="a-h2" value="SAQ by Qundyz"/></div>
-      <div class="adm-f"><label>Подзаголовок</label><textarea id="a-hs">Окунитесь в мир степного духа. Всего в 7 минутах от Президентского парка — незабываемые конные прогулки, стрельба из лука и этнонаряды.</textarea></div>
-      <div class="adm-f"><label>Бейдж-строка</label><input id="a-hb" value="✦ Алматы — ул. Ерубаева 8/10 ✦"/></div>
-      <div class="adm-div">Статистика</div>
-      <di
+<section class="about-sec" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img-wrap" data-aos="fade-right" data-aos-duration="900">
+        <img id="about-img" src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80" alt=""/>
+        <div class="about-badge">✦ SAQ by Qundyz</div>
+      </div>
+      <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+        <span class="sec-eye" data-i18n="ab.eye">О нас</span>
+        <h2 class="sec-title" data-i18n="ab.title">Здесь живёт<br/>дух степей</h2>
+        <div class="gold-line l"></div>
+        <p id="ab-t1" style="color:#555;line-height:1.75;margin-bottom:1.25rem;font-size:.95rem;">QUNDYZ SAQ — это место, где каждый гость прикасается к живой казахской традиции.</p>
+        <p id="ab-t2" style="color:#555;line-height:1.75;margin-bottom:1.75rem;font-size:.95rem;">Мы предлагаем конные прогулки, туры, обучение верховой езде, стрельбу из лука и фотосессии.</p>
+        <div>
+          <span class="chip">🐴 <span data-i18n="ch.r">Конные прогулки</span></span>
+          <span class="chip">🏹 <span data-i18n="ch.a">Стрельба из лука</span></span>
+          <span class="chip">📸 <span data-i18n="ch.v">Видеосъёмка</span></span>
+          <span class="chip">👘 <span data-i18n="ch.e">Этнонаряды</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ride-sec" id="ride">
+  <div class="wrap" style="text-align:center;">
+    <span class="sec-eye" data-aos="fade-up" data-i18n="ri.eye">Что входит в прогулку</span>
+    <h2 class="sec-title" data-aos="fade-up" data-aos-delay="100" data-i18n="ri.title">Полный пакет впечатлений</h2>
+    <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;">
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="0"><img src="https://images.unsplash.com/photo-1475776408506-9a5371e7a068?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c1">🐎 Конная прогулка</h3><p data-i18n="ri.c1d">Верховая прогулка по живописным холмам.</p></div></div>
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="100"><img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c2">🏹 Стрельба из лука</h3><p data-i18n="ri.c2d">Древнее казахское искусство.</p></div></div>
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="200"><img src="https://images.unsplash.com/photo-1490424660416-359912d314b3?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c3">👘 Этнонаряды</h3><p data-i18n="ri.c3d">Традиционные казахские костюмы.</p></div></div>
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="300"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c4">☕ Чай + хот дог</h3><p data-i18n="ri.c4d">Горячий чай и хот дог у костра.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc-sec" id="services">
+  <div class="wrap" style="text-align:center;">
+    <span class="sec-eye" data-aos="fade-up" data-i18n="sv.eye">Наши услуги</span>
+    <h2 class="sec-title" data-aos="fade-up" data-aos-delay="100" data-i18n="sv.title">Выберите свой формат</h2>
+    <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
+      <div class="price-card" data-aos="fade-up" data-aos-delay="0"><div class="p-icon">🐴</div><h3 data-i18n="sv.1">Конная прогулка</h3><span class="p-label" data-i18n="sv.1l">Основная услуга</span><div class="p-amount" id="p1">от 5 000₸</div><p class="p-desc" data-i18n="sv.1s">За человека / 1 час</p><ul><li data-i18n="sv.1f1">Инструктор</li><li data-i18n="sv.1f2">Стрельба из лука</li><li data-i18n="sv.1f3">Этнонаряды</li><li data-i18n="sv.1f4">Горячий чай</li></ul><a href="#" class="btn-book wa-link" data-i18n="btn.bk">Записаться</a></div>
+      <div class="price-card feat" data-aos="fade-up" data-aos-delay="100"><div class="p-badge" data-i18n="badge.h">Хит</div><div class="p-icon">🏔️</div><h3 data-
