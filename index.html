@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title id="page-title">SAQ by Qundyz — Конные прогулки в Алматы</title>
+<title>SAQ by Qundyz — Конные прогулки в Алматы</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
@@ -31,10 +31,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,
 .lang-sw{display:flex;gap:2px;background:rgba(45,106,79,.08);border-radius:50px;padding:3px;}
 .lang-btn{border:none;background:none;cursor:pointer;font-size:.72rem;font-weight:700;padding:.28rem .65rem;border-radius:50px;color:var(--br);transition:all .2s;}
 .lang-btn.on{background:var(--ed);color:#fff;}
-
-/* ADMIN BTN */
-.adm-btn{border:1.5px solid rgba(45,106,79,.3);background:none;border-radius:50px;padding:.3rem .8rem;font-size:.7rem;font-weight:700;color:var(--ed);cursor:pointer;transition:all .2s;white-space:nowrap;}
-.adm-btn:hover{background:var(--ed);color:#fff;border-color:var(--ed);}
 
 .nav-cta{background:var(--go);color:var(--br);padding:.42rem 1.1rem;border-radius:50px;font-size:.78rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:background .2s,transform .2s;}
 .nav-cta:hover{background:var(--gl);transform:translateY(-1px);}
@@ -139,38 +135,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,
 footer{background:var(--br);color:rgba(255,255,255,.75);text-align:center;padding:2rem;font-size:.8rem;}
 footer a{color:var(--go);text-decoration:none;}
 
-/* ADMIN PANEL */
-#adm-panel{position:fixed;top:0;right:0;bottom:0;z-index:9999;width:360px;max-width:95vw;background:#fff;box-shadow:-4px 0 40px rgba(0,0,0,.18);display:flex;flex-direction:column;transform:translateX(110%);transition:transform .38s cubic-bezier(.4,0,.2,1);border-left:3px solid var(--go);}
-#adm-panel.open{transform:translateX(0);}
-.adm-hd{background:var(--ed);color:#fff;padding:1.1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
-.adm-hd h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;}
-.adm-close{background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;line-height:1;}
-.adm-tabs{display:flex;flex-wrap:wrap;border-bottom:2px solid #eee;flex-shrink:0;}
-.adm-tab{flex:1;min-width:55px;padding:.6rem .3rem;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border:none;background:none;cursor:pointer;color:#999;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;}
-.adm-tab.on{color:var(--ed);border-bottom-color:var(--go);}
-.adm-body{flex:1;overflow-y:auto;padding:1.25rem;}
-.adm-sec{display:none;}
-.adm-sec.on{display:block;}
-.adm-f{margin-bottom:1rem;}
-.adm-f label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ed);margin-bottom:.3rem;}
-.adm-f input,.adm-f textarea,.adm-f select{width:100%;padding:.55rem .8rem;border:1.5px solid #e0e0e0;border-radius:.6rem;font-size:.85rem;color:var(--br);background:#fafafa;outline:none;transition:border-color .2s;font-family:'Inter',sans-serif;}
-.adm-f input:focus,.adm-f textarea:focus{border-color:var(--eg);background:#fff;}
-.adm-f textarea{min-height:72px;resize:vertical;}
-.adm-div{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--go);border-bottom:1px solid rgba(212,175,55,.25);padding-bottom:.4rem;margin:1.2rem 0 .8rem;}
-.adm-ft{padding:1rem 1.25rem;border-top:1px solid #eee;display:flex;flex-direction:column;gap:.6rem;flex-shrink:0;}
-.adm-abtn{width:100%;padding:.65rem;border-radius:.6rem;font-weight:700;font-size:.82rem;cursor:pointer;border:none;transition:all .2s;}
-.adm-apply{background:var(--ed);color:#fff;} .adm-apply:hover{background:var(--eg);}
-.adm-export{background:var(--go);color:var(--br);} .adm-export:hover{background:var(--gl);}
-.adm-import{background:#f1f5f9;color:var(--br);border:1.5px solid #e0e0e0;}
-.adm-reset{background:#fff0f0;color:#c0392b;border:1.5px solid #f5c6c6;}
-.adm-music{background:var(--eg);color:#fff;} .adm-music:hover{background:var(--eg);}
-.img-prev{width:100%;height:90px;object-fit:cover;border-radius:.5rem;margin-top:.4rem;display:none;border:1px solid #eee;}
-.img-prev.show{display:block;}
-#adm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:9998;display:none;opacity:0;transition:opacity .3s;}
-#adm-overlay.show{display:block;opacity:1;}
-#adm-toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ed);color:#fff;padding:.65rem 1.5rem;border-radius:50px;font-size:.82rem;font-weight:600;z-index:99999;transition:transform .35s,opacity .35s;opacity:0;pointer-events:none;white-space:nowrap;}
-#adm-toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
-
 /* MUSIC PLAYER */
 #saq-player{position:fixed;bottom:1.4rem;left:1.4rem;z-index:8000;display:flex;align-items:center;gap:.7rem;background:rgba(27,67,50,.95);backdrop-filter:blur(18px);border:1px solid rgba(212,175,55,.45);border-radius:3rem;padding:.6rem .9rem .6rem .65rem;box-shadow:0 8px 32px rgba(0,0,0,.32);transition:max-width .42s cubic-bezier(.4,0,.2,1),border-radius .42s,padding .42s;max-width:340px;min-width:52px;overflow:hidden;user-select:none;}
 #saq-player.closed{max-width:52px;padding:.65rem;border-radius:50%;}
@@ -216,11 +180,11 @@ footer a{color:var(--go);text-decoration:none;}
 <nav>
   <span class="nav-logo">SAQ <span>✦</span> by Qundyz</span>
   <div class="nav-links">
-    <a href="#about" data-i18n="nav.about">О нас</a>
-    <a href="#ride" data-i18n="nav.ride">Прогулка</a>
-    <a href="#services" data-i18n="nav.svc">Услуги</a>
-    <a href="#gallery" data-i18n="nav.gal">Галерея</a>
-    <a href="#contact" data-i18n="nav.cnt">Контакты</a>
+    <a href="#about">О нас</a>
+    <a href="#ride">Прогулка</a>
+    <a href="#services">Услуги</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#contact">Контакты</a>
   </div>
   <div class="nav-right">
     <div class="lang-sw">
@@ -228,129 +192,9 @@ footer a{color:var(--go);text-decoration:none;}
       <button class="lang-btn" onclick="setLang('kz')">KZ</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
     </div>
-    <button class="adm-btn" onclick="admOpen()">⚙️ <span data-i18n="adm.btn">Редактор</span></button>
     <a id="nav-wa" href="https://wa.me/77024175882" class="nav-cta" target="_blank">WhatsApp</a>
   </div>
 </nav>
-
-<!-- ADMIN OVERLAY -->
-<div id="adm-overlay" onclick="admClose()"></div>
-
-<!-- ADMIN PANEL -->
-<div id="adm-panel">
-  <div class="adm-hd">
-    <h3>⚙️ Панель управления</h3>
-    <button class="adm-close" onclick="admClose()">✕</button>
-  </div>
-  <div class="adm-tabs">
-    <button class="adm-tab on" onclick="admTab('t-text')">📝 Тексты</button>
-    <button class="adm-tab" onclick="admTab('t-contacts')">📞 Контакты</button>
-    <button class="adm-tab" onclick="admTab('t-photos')">🖼 Фото</button>
-    <button class="adm-tab" onclick="admTab('t-prices')">💰 Цены</button>
-    <button class="adm-tab" onclick="admTab('t-music')">🎵 Музыка</button>
-  </div>
-  <div class="adm-body">
-
-    <!-- TEXTS -->
-    <div id="t-text" class="adm-sec on">
-      <div class="adm-div">Hero секция</div>
-      <div class="adm-f"><label>Заголовок строка 1</label><input id="a-h1" value="Конные прогулки"/></div>
-      <div class="adm-f"><label>Заголовок курсив строка 2</label><input id="a-h2" value="SAQ by Qundyz"/></div>
-      <div class="adm-f"><label>Подзаголовок</label><textarea id="a-hs">Окунитесь в мир степного духа. Всего в 7 минутах от Президентского парка — незабываемые конные прогулки, стрельба из лука и этнонаряды.</textarea></div>
-      <div class="adm-f"><label>Бейдж-строка</label><input id="a-hb" value="✦ Алматы — ул. Ерубаева 8/10 ✦"/></div>
-      <div class="adm-div">Статистика</div>
-      <div class="adm-f"><label>Число 1</label><input id="a-s1n" value="10 000+"/></div>
-      <div class="adm-f"><label>Подпись 1</label><input id="a-s1l" value="Довольных гостей"/></div>
-      <div class="adm-f"><label>Число 2</label><input id="a-s2n" value="7+"/></div>
-      <div class="adm-f"><label>Подпись 2</label><input id="a-s2l" value="Лет опыта"/></div>
-      <div class="adm-f"><label>Число 3</label><input id="a-s3n" value="7 мин"/></div>
-      <div class="adm-f"><label>Подпись 3</label><input id="a-s3l" value="От парка"/></div>
-      <div class="adm-div">О нас</div>
-      <div class="adm-f"><label>Абзац 1</label><textarea id="a-ab1">QUNDYZ SAQ — это место, где каждый гость прикасается к живой казахской традиции. Наши ухоженные лошади, опытные инструкторы и красивые локации в горах Алматы создают атмосферу, которую невозможно забыть.</textarea></div>
-      <div class="adm-f"><label>Абзац 2</label><textarea id="a-ab2">Мы предлагаем конные прогулки, туры, обучение верховой езде, стрельбу из лука и фотосессии в этнонарядах — всё в нескольких минутах от города.</textarea></div>
-    </div>
-
-    <!-- CONTACTS -->
-    <div id="t-contacts" class="adm-sec">
-      <div class="adm-div">Контакты</div>
-      <div class="adm-f"><label>WhatsApp основной (цифры)</label><input id="a-w1" value="77024175882"/></div>
-      <div class="adm-f"><label>WhatsApp доп. (цифры)</label><input id="a-w2" value="77773580323"/></div>
-      <div class="adm-f"><label>Адрес</label><input id="a-addr" value="г. Алматы, ул. Ерубаева 8/10 — Один Сиас SAQ"/></div>
-      <div class="adm-f"><label>Режим работы</label><input id="a-hrs" value="Ежедневно с 8:00 до 20:00"/></div>
-      <div class="adm-div">Ссылки</div>
-      <div class="adm-f"><label>Instagram URL</label><input id="a-ig" value="https://www.instagram.com/saq_kundyz?igsh=cXI4ZWY5YnFzc2t6"/></div>
-      <div class="adm-f"><label>TikTok URL</label><input id="a-tt" value="https://www.tiktok.com/@saq.qundyz"/></div>
-      <div class="adm-f"><label>2GIS URL</label><input id="a-2g" value="https://2gis.kz/almaty/geo/70000001093833415/76.864960,43.157731"/></div>
-    </div>
-
-    <!-- PHOTOS -->
-    <div id="t-photos" class="adm-sec">
-      <p style="font-size:.78rem;color:#888;margin-bottom:1rem;">Вставьте прямую ссылку на фото (Unsplash, Google Drive, ваш сервер)</p>
-      <div class="adm-div">Hero фон</div>
-      <div class="adm-f"><label>URL фона</label><input id="a-hi" value="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=1600&q=80" oninput="prevImg(this,'pi-h')"/><img id="pi-h" class="img-prev"/></div>
-      <div class="adm-div">Фото "О нас"</div>
-      <div class="adm-f"><label>URL фото</label><input id="a-ai" value="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80" oninput="prevImg(this,'pi-a')"/><img id="pi-a" class="img-prev"/></div>
-      <div class="adm-div">Галерея (6 фото)</div>
-      <div id="gal-fields"></div>
-    </div>
-
-    <!-- PRICES -->
-    <div id="t-prices" class="adm-sec">
-      <div class="adm-div">Конная прогулка</div>
-      <div class="adm-f"><label>Цена</label><input id="a-p1" value="от 5 000₸"/></div>
-      <div class="adm-div">Конный тур</div>
-      <div class="adm-f"><label>Цена</label><input id="a-p2" value="от 15 000₸"/></div>
-      <div class="adm-div">Видеосъёмка</div>
-      <div class="adm-f"><label>Цена</label><input id="a-p3" value="от 10 000₸"/></div>
-      <div class="adm-div">Стрельба из лука</div>
-      <div class="adm-f"><label>Цена</label><input id="a-p4" value="от 4 000₸"/></div>
-      <div class="adm-div">Обучение ВЕ</div>
-      <div class="adm-f"><label>Цена</label><input id="a-p5" value="от 7 000₸"/></div>
-      <div class="adm-div">Зарплата (вакансии)</div>
-      <div class="adm-f"><label>Диапазон</label><input id="a-sal" value="8 000 — 15 000₸ / день"/></div>
-    </div>
-
-    <!-- MUSIC -->
-    <div id="t-music" class="adm-sec">
-      <div style="background:linear-gradient(135deg,var(--ed),var(--eg));border-radius:1rem;padding:1rem 1.2rem;margin-bottom:1rem;">
-        <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;margin-bottom:.4rem;color:var(--gl);">🎵 КАК ДОБАВИТЬ МУЗЫКУ</div>
-        <p style="font-size:.75rem;line-height:1.5;color:rgba(255,255,255,.85);margin:0;">
-          1. Загрузите MP3 на Google Drive<br/>
-          2. Правая кнопка → "Открыть доступ" → "Все у кого есть ссылка"<br/>
-          3. Скопируйте ID из ссылки и вставьте:<br/>
-          <code style="background:rgba(0,0,0,.2);padding:.1rem .4rem;border-radius:.3rem;font-size:.68rem;display:block;margin-top:.4rem;word-break:break-all;">https://drive.google.com/uc?export=download&id=ВАШ_ID</code>
-        </p>
-      </div>
-      <div class="adm-div">Трек 1 (основной)</div>
-      <div class="adm-f"><label>Название</label><input id="a-t1n" value="Дух степей"/></div>
-      <div class="adm-f"><label>Исполнитель</label><input id="a-t1a" value="SAQ Music"/></div>
-      <div class="adm-f"><label>Прямая ссылка MP3</label><input id="a-t1u" placeholder="https://...mp3"/></div>
-      <div class="adm-div">Трек 2</div>
-      <div class="adm-f"><label>Название</label><input id="a-t2n" value="Казахская степь"/></div>
-      <div class="adm-f"><label>Исполнитель</label><input id="a-t2a" value="SAQ Music"/></div>
-      <div class="adm-f"><label>Прямая ссылка MP3</label><input id="a-t2u" placeholder="https://...mp3"/></div>
-      <div class="adm-div">Трек 3</div>
-      <div class="adm-f"><label>Название</label><input id="a-t3n" value="Горный закат"/></div>
-      <div class="adm-f"><label>Исполнитель</label><input id="a-t3a" value="SAQ Music"/></div>
-      <div class="adm-f"><label>Прямая ссылка MP3</label><input id="a-t3u" placeholder="https://...mp3"/></div>
-      <div class="adm-div">Настройки</div>
-      <div class="adm-f"><label>Автозапуск при входе</label>
-        <select id="a-mauto"><option value="yes">Да (после первого клика)</option><option value="no">Нет</option></select>
-      </div>
-      <div class="adm-f"><label>Громкость по умолчанию (0–100)</label><input id="a-mvol" type="number" min="0" max="100" value="45"/></div>
-      <button class="adm-abtn adm-music" style="width:100%;margin-top:.5rem;" onclick="applyMusic()">🎵 Применить музыку</button>
-    </div>
-
-  </div>
-  <div class="adm-ft">
-    <button class="adm-abtn adm-apply" onclick="admApply()">✅ Применить изменения</button>
-    <button class="adm-abtn adm-export" onclick="admExport()">📥 Экспорт настроек (JSON)</button>
-    <button class="adm-abtn adm-import" onclick="document.getElementById('adm-import-f').click()">📤 Импорт настроек (JSON)</button>
-    <input id="adm-import-f" type="file" accept=".json" style="display:none" onchange="admImport(event)"/>
-    <button class="adm-abtn adm-reset" onclick="admReset()">🔄 Сбросить всё</button>
-  </div>
-</div>
-<div id="adm-toast"></div>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -363,8 +207,8 @@ footer a{color:var(--go);text-decoration:none;}
       <div class="h-stat"><span class="num" id="s2n">7+</span><span class="lbl" id="s2l">Лет опыта</span></div>
       <div class="h-stat"><span class="num" id="s3n">7 мин</span><span class="lbl" id="s3l">От парка</span></div>
     </div>
-    <a id="hero-wa" href="https://wa.me/77024175882" class="btn-gold" target="_blank" data-i18n="hero.cta">Записаться на прогулку</a>
-    <a href="#about" class="btn-ghost" data-i18n="hero.more">Узнать больше</a>
+    <a id="hero-wa" href="https://wa.me/77024175882" class="btn-gold" target="_blank">Записаться на прогулку</a>
+    <a href="#about" class="btn-ghost">Узнать больше</a>
   </div>
 </section>
 
@@ -377,18 +221,18 @@ footer a{color:var(--go);text-decoration:none;}
         <div class="about-badge">✦ SAQ by Qundyz</div>
       </div>
       <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
-        <span class="sec-eye" data-i18n="ab.eye">О нас</span>
-        <h2 class="sec-title" data-i18n="ab.title">Здесь живёт<br/>дух степей</h2>
+        <span class="sec-eye">О нас</span>
+        <h2 class="sec-title">Здесь живёт<br/>дух степей</h2>
         <div class="gold-line l"></div>
         <p id="ab-t1" style="color:#555;line-height:1.75;margin-bottom:1.25rem;font-size:.95rem;">QUNDYZ SAQ — это место, где каждый гость прикасается к живой казахской традиции. Наши ухоженные лошади, опытные инструкторы и красивые локации в горах Алматы создают атмосферу, которую невозможно забыть.</p>
         <p id="ab-t2" style="color:#555;line-height:1.75;margin-bottom:1.75rem;font-size:.95rem;">Мы предлагаем конные прогулки, туры, обучение верховой езде, стрельбу из лука и фотосессии в этнонарядах — всё в нескольких минутах от города.</p>
         <div>
-          <span class="chip">🐴 <span data-i18n="ch.r">Конные прогулки</span></span>
-          <span class="chip">🏹 <span data-i18n="ch.a">Стрельба из лука</span></span>
-          <span class="chip">📸 <span data-i18n="ch.v">Видеосъёмка</span></span>
-          <span class="chip">👘 <span data-i18n="ch.e">Этнонаряды</span></span>
-          <span class="chip">🏕️ <span data-i18n="ch.c">Киновечер у костра</span></span>
-          <span class="chip">🏔️ <span data-i18n="ch.t">Горные туры</span></span>
+          <span class="chip">🐴 Конные прогулки</span>
+          <span class="chip">🏹 Стрельба из лука</span>
+          <span class="chip">📸 Видеосъёмка</span>
+          <span class="chip">👘 Этнонаряды</span>
+          <span class="chip">🏕️ Киновечер у костра</span>
+          <span class="chip">🏔️ Горные туры</span>
         </div>
       </div>
     </div>
@@ -398,14 +242,14 @@ footer a{color:var(--go);text-decoration:none;}
 <!-- RIDE INCLUDED -->
 <section class="ride-sec" id="ride">
   <div class="wrap" style="text-align:center;">
-    <span class="sec-eye" data-aos="fade-up" data-i18n="ri.eye">Что входит в прогулку</span>
-    <h2 class="sec-title" data-aos="fade-up" data-aos-delay="100" data-i18n="ri.title">Полный пакет впечатлений</h2>
-    <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
+    <span class="sec-eye">Что входит в прогулку</span>
+    <h2 class="sec-title">Полный пакет впечатлений</h2>
+    <div class="gold-line"></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;">
-      <div class="ride-card" data-aos="fade-up" data-aos-delay="0"><img src="https://images.unsplash.com/photo-1475776408506-9a5371e7a068?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c1">🐎 Конная прогулка</h3><p data-i18n="ri.c1d">Верховая прогулка по живописным холмам с видом на горы и город.</p></div></div>
-      <div class="ride-card" data-aos="fade-up" data-aos-delay="100"><img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c2">🏹 Стрельба из лука</h3><p data-i18n="ri.c2d">Древнее казахское искусство под руководством опытного инструктора.</p></div></div>
-      <div class="ride-card" data-aos="fade-up" data-aos-delay="200"><img src="https://images.unsplash.com/photo-1490424660416-359912d314b3?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c3">👘 Этнонаряды</h3><p data-i18n="ri.c3d">Традиционные казахские костюмы для незабываемых фотографий.</p></div></div>
-      <div class="ride-card" data-aos="fade-up" data-aos-delay="300"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c4">☕ Чай + хот дог у костра</h3><p data-i18n="ri.c4d">Горячий чай и хот дог у открытого огня после прогулки.</p></div></div>
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="0"><img src="https://images.unsplash.com/photo-1475776408506-9a5371e7a068?w=600&q=80" alt=""/><div class="ride-card-body"><h3>🐎 Конная прогулка</h3><p>Верховая прогулка по живописным холмам с видом на горы и город.</p></div></div>
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="100"><img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600&q=80" alt=""/><div class="ride-card-body"><h3>🏹 Стрельба из лука</h3><p>Древнее казахское искусство под руководством опытного инструктора.</p></div></div>
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="200"><img src="https://images.unsplash.com/photo-1490424660416-359912d314b3?w=600&q=80" alt=""/><div class="ride-card-body"><h3>👘 Этнонаряды</h3><p>Традиционные казахские костюмы для незабываемых фотографий.</p></div></div>
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="300"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt=""/><div class="ride-card-body"><h3>☕ Чай + хот дог у костра</h3><p>Горячий чай и хот дог у открытого огня после прогулки.</p></div></div>
     </div>
   </div>
 </section>
@@ -413,16 +257,16 @@ footer a{color:var(--go);text-decoration:none;}
 <!-- SERVICES -->
 <section class="svc-sec" id="services">
   <div class="wrap" style="text-align:center;">
-    <span class="sec-eye" data-aos="fade-up" data-i18n="sv.eye">Наши услуги</span>
-    <h2 class="sec-title" data-aos="fade-up" data-aos-delay="100" data-i18n="sv.title">Выберите свой формат</h2>
-    <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
+    <span class="sec-eye">Наши услуги</span>
+    <h2 class="sec-title">Выберите свой формат</h2>
+    <div class="gold-line"></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
-      <div class="price-card" data-aos="fade-up" data-aos-delay="0"><div class="p-icon">🐴</div><h3 data-i18n="sv.1">Конная прогулка</h3><span class="p-label" data-i18n="sv.1l">Основная услуга</span><div class="p-amount" id="p1">от 5 000₸</div><p class="p-desc" data-i18n="sv.1s">За человека / 1 час</p><ul><li data-i18n="sv.1f1">Инструктор в комплекте</li><li data-i18n="sv.1f2">Стрельба из лука</li><li data-i18n="sv.1f3">Этнонаряды</li><li data-i18n="sv.1f4">Горячий чай у костра</li><li data-i18n="sv.1f5">Съёмка на ваш телефон</li></ul><a href="#" class="btn-book wa-link" data-i18n="btn.bk">Записаться</a></div>
-      <div class="price-card feat" data-aos="fade-up" data-aos-delay="100"><div class="p-badge" data-i18n="badge.h">Хит</div><div class="p-icon">🏔️</div><h3 data-i18n="sv.2">Конный тур</h3><span class="p-label" data-i18n="sv.2l">Расширенный формат</span><div class="p-amount" id="p2">от 15 000₸</div><p class="p-desc" data-i18n="sv.2s">За человека / полдня</p><ul><li data-i18n="sv.2f1">Горный маршрут</li><li data-i18n="sv.2f2">Всё включено из базового</li><li data-i18n="sv.2f3">Киновечер под открытым небом</li><li data-i18n="sv.2f4">Этнонаряды + фотосессия</li><li data-i18n="sv.2f5">Профессиональная съёмка</li></ul><a href="#" class="btn-book out wa-link" data-i18n="btn.bk">Записаться</a></div>
-      <div class="price-card" data-aos="fade-up" data-aos-delay="200"><div class="p-icon">📸</div><h3 data-i18n="sv.3">Видеосъёмка</h3><span class="p-label" data-i18n="sv.3l">Профессиональное</span><div class="p-amount" id="p3">от 10 000₸</div><p class="p-desc" data-i18n="sv.3s">Профессиональная съёмка</p><ul><li data-i18n="sv.3f1">Видеосъёмка на лошади</li><li data-i18n="sv.3f2">Фото в этнонаряде</li><li data-i18n="sv.3f3">Монтаж и обработка</li><li data-i18n="sv.3f4">Контент для соцсетей</li><li data-i18n="sv.3f5">Вид на горы и город</li></ul><a href="#" class="btn-book wa-link" data-i18n="btn.bk">Записаться</a></div>
-      <div class="price-card" data-aos="fade-up" data-aos-delay="0"><div class="p-icon">🏹</div><h3 data-i18n="sv.4">Обучение стрельбе</h3><span class="p-label" data-i18n="sv.4l">Индивидуально / группа</span><div class="p-amount" id="p4">от 4 000₸</div><p class="p-desc" data-i18n="sv.4s">За человека / урок</p><ul><li data-i18n="sv.4f1">Базовый курс лучника</li><li data-i18n="sv.4f2">Традиционный казахский лук</li><li data-i18n="sv.4f3">Инструктор по стрельбе</li><li data-i18n="sv.4f4">Для детей и взрослых</li><li data-i18n="sv.4f5">Сертификат участника</li></ul><a href="#" class="btn-book wa-link" data-i18n="btn.bk">Записаться</a></div>
-      <div class="price-card" data-aos="fade-up" data-aos-delay="100"><div class="p-icon">🐎</div><h3 data-i18n="sv.5">Обучение верховой езде</h3><span class="p-label" data-i18n="sv.5l">Обучение (ВЕ)</span><div class="p-amount" id="p5">от 7 000₸</div><p class="p-desc" data-i18n="sv.5s">За занятие</p><ul><li data-i18n="sv.5f1">Для начинающих и продвинутых</li><li data-i18n="sv.5f2">Опытный инструктор ВЕ</li><li data-i18n="sv.5f3">Ухоженные лошади</li><li data-i18n="sv.5f4">Индивидуальный подход</li><li data-i18n="sv.5f5">Группы и личные занятия</li></ul><a href="#" class="btn-book wa-link" data-i18n="btn.bk">Записаться</a></div>
-      <div class="price-card" data-aos="fade-up" data-aos-delay="200"><div class="p-icon">🎪</div><h3 data-i18n="sv.6">Тимбилдинг</h3><span class="p-label" data-i18n="sv.6l">Для компаний</span><div class="p-amount" data-i18n="sv.6p">По запросу</div><p class="p-desc" data-i18n="sv.6s">От 5 человек</p><ul><li data-i18n="sv.6f1">Конные активности для команды</li><li data-i18n="sv.6f2">Стрельба из лука на время</li><li data-i18n="sv.6f3">Конное шоу</li><li data-i18n="sv.6f4">Фуршет и костёр</li><li data-i18n="sv.6f5">Корпоративное фото/видео</li></ul><a href="#" class="btn-book wa-link" data-i18n="btn.ds">Обсудить</a></div>
+      <div class="price-card" data-aos="fade-up" data-aos-delay="0"><div class="p-icon">🐴</div><h3>Конная прогулка</h3><span class="p-label">Основная услуга</span><div class="p-amount" id="p1">от 5 000₸</div><p class="p-desc">За человека / 1 час</p><ul><li>Инструктор в комплекте</li><li>Стрельба из лука</li><li>Этнонаряды</li><li>Горячий чай у костра</li><li>Съёмка на ваш телефон</li></ul><a href="#" class="btn-book wa-link">Записаться</a></div>
+      <div class="price-card feat" data-aos="fade-up" data-aos-delay="100"><div class="p-badge">Хит</div><div class="p-icon">🏔️</div><h3>Конный тур</h3><span class="p-label">Расширенный формат</span><div class="p-amount" id="p2">от 15 000₸</div><p class="p-desc">За человека / полдня</p><ul><li>Горный маршрут</li><li>Всё включено из базового</li><li>Киновечер под открытым небом</li><li>Этнонаряды + фотосессия</li><li>Профессиональная съёмка</li></ul><a href="#" class="btn-book out wa-link">Записаться</a></div>
+      <div class="price-card" data-aos="fade-up" data-aos-delay="200"><div class="p-icon">📸</div><h3>Видеосъёмка</h3><span class="p-label">Профессиональное</span><div class="p-amount" id="p3">от 10 000₸</div><p class="p-desc">Профессиональная съёмка</p><ul><li>Видеосъёмка на лошади</li><li>Фото в этнонаряде</li><li>Монтаж и обработка</li><li>Контент для соцсетей</li><li>Вид на горы и город</li></ul><a href="#" class="btn-book wa-link">Записаться</a></div>
+      <div class="price-card" data-aos="fade-up" data-aos-delay="0"><div class="p-icon">🏹</div><h3>Обучение стрельбе</h3><span class="p-label">Индивидуально / группа</span><div class="p-amount" id="p4">от 4 000₸</div><p class="p-desc">За человека / урок</p><ul><li>Базовый курс лучника</li><li>Традиционный казахский лук</li><li>Инструктор по стрельбе</li><li>Для детей и взрослых</li><li>Сертификат участника</li></ul><a href="#" class="btn-book wa-link">Записаться</a></div>
+      <div class="price-card" data-aos="fade-up" data-aos-delay="100"><div class="p-icon">🐎</div><h3>Обучение верховой езде</h3><span class="p-label">Обучение (ВЕ)</span><div class="p-amount" id="p5">от 7 000₸</div><p class="p-desc">За занятие</p><ul><li>Для начинающих и продвинутых</li><li>Опытный инструктор ВЕ</li><li>Ухоженные лошади</li><li>Индивидуальный подход</li><li>Группы и личные занятия</li></ul><a href="#" class="btn-book wa-link">Записаться</a></div>
+      <div class="price-card" data-aos="fade-up" data-aos-delay="200"><div class="p-icon">🎪</div><h3>Тимбилдинг</h3><span class="p-label">Для компаний</span><div class="p-amount">По запросу</div><p class="p-desc">От 5 человек</p><ul><li>Конные активности для команды</li><li>Стрельба из лука на время</li><li>Конное шоу</li><li>Фуршет и костёр</li><li>Корпоративное фото/видео</li></ul><a href="#" class="btn-book wa-link">Обсудить</a></div>
     </div>
   </div>
 </section>
@@ -430,19 +274,19 @@ footer a{color:var(--go);text-decoration:none;}
 <!-- GALLERY -->
 <section class="gal-sec" id="gallery">
   <div class="wrap" style="text-align:center;">
-    <span class="sec-eye" data-aos="fade-up" data-i18n="gl.eye">Галерея</span>
-    <h2 class="sec-title" data-aos="fade-up" data-aos-delay="100" data-i18n="gl.title">Ваши моменты с нами</h2>
-    <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
+    <span class="sec-eye">Галерея</span>
+    <h2 class="sec-title">Ваши моменты с нами</h2>
+    <div class="gold-line"></div>
     <div class="gal-grid">
-      <div class="gal-item tall" data-aos="fade-up" data-aos-delay="0"><img id="gi0" src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=700&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.0">Наши лошади</span></div></div>
-      <div class="gal-item" data-aos="fade-up" data-aos-delay="100"><img id="gi1" src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.1">Конная прогулка</span></div></div>
-      <div class="gal-item" data-aos="fade-up" data-aos-delay="200"><img id="gi2" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.2">Закат в горах</span></div></div>
-      <div class="gal-item" data-aos="fade-up" data-aos-delay="150"><img id="gi3" src="https://images.unsplash.com/photo-1443891522184-ffd4b5d7bb04?w=600&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.3">Красавцы</span></div></div>
-      <div class="gal-item" data-aos="fade-up" data-aos-delay="250"><img id="gi4" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.4">Горные тропы</span></div></div>
-      <div class="gal-item" data-aos="fade-up" data-aos-delay="350"><img id="gi5" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.5">Вид на город</span></div></div>
+      <div class="gal-item tall" data-aos="fade-up" data-aos-delay="0"><img id="gi0" src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=700&q=80" alt=""/><div class="gal-ov"><span>Наши лошади</span></div></div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="100"><img id="gi1" src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600&q=80" alt=""/><div class="gal-ov"><span>Конная прогулка</span></div></div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="200"><img id="gi2" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt=""/><div class="gal-ov"><span>Закат в горах</span></div></div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="150"><img id="gi3" src="https://images.unsplash.com/photo-1443891522184-ffd4b5d7bb04?w=600&q=80" alt=""/><div class="gal-ov"><span>Красавцы</span></div></div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="250"><img id="gi4" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" alt=""/><div class="gal-ov"><span>Горные тропы</span></div></div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="350"><img id="gi5" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt=""/><div class="gal-ov"><span>Вид на город</span></div></div>
     </div>
     <div style="margin-top:2rem;">
-      <a id="ig-gal" href="https://www.instagram.com/saq_kundyz?igsh=cXI4ZWY5YnFzc2t6" target="_blank" class="soc-btn soc-ig" data-i18n="gl.ig">📸 Больше фото в Instagram</a>
+      <a id="ig-gal" href="https://www.instagram.com/saq_kundyz?igsh=cXI4ZWY5YnFzc2t6" target="_blank" class="soc-btn soc-ig">📸 Больше фото в Instagram</a>
     </div>
   </div>
 </section>
@@ -450,20 +294,20 @@ footer a{color:var(--go);text-decoration:none;}
 <!-- JOBS -->
 <section class="jobs-sec" id="jobs">
   <div class="wrap" style="text-align:center;">
-    <span class="sec-eye" data-aos="fade-up" data-i18n="jb.eye">Карьера</span>
-    <h2 class="sec-title" data-aos="fade-up" data-aos-delay="100" data-i18n="jb.title">Присоединяйтесь к команде</h2>
-    <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
-    <p data-aos="fade-up" data-aos-delay="250" style="color:#666;max-width:560px;margin:0 auto 2.5rem;font-size:.95rem;line-height:1.7;" data-i18n="jb.desc">Мы ищем конника-инструктора в команду единомышленников, влюблённых в природу и лошадей. Работа в горах, на свежем воздухе.</p>
+    <span class="sec-eye">Карьера</span>
+    <h2 class="sec-title">Присоединяйтесь к команде</h2>
+    <div class="gold-line"></div>
+    <p style="color:#666;max-width:560px;margin:0 auto 2.5rem;font-size:.95rem;line-height:1.7;">Мы ищем конника-инструктора в команду единомышленников, влюблённых в природу и лошадей. Работа в горах, на свежем воздухе.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-bottom:2.5rem;">
-      <div class="job-card" data-aos="fade-up" data-aos-delay="0"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80" alt=""/><div class="job-card-body"><h3 data-i18n="jb.j1">🐎 Конник-инструктор</h3><p data-i18n="jb.j1d">Тары-Аюсай и Санаторий Ак Бастау. Умеешь работать с лошадьми — ты нам нужен!</p></div></div>
-      <div class="job-card" data-aos="fade-up" data-aos-delay="150"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80" alt=""/><div class="job-card-body"><h3 data-i18n="jb.j2">📸 Контент-мейкер</h3><p data-i18n="jb.j2d">Снимаешь красивые видео и фото? Работа на свежем воздухе ждёт тебя.</p></div></div>
-      <div class="job-card" data-aos="fade-up" data-aos-delay="300"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80" alt=""/><div class="job-card-body"><h3 data-i18n="jb.j3">🌿 Гид по горным турам</h3><p data-i18n="jb.j3d">Любишь горы и хочешь делиться знаниями? Дружный коллектив!</p></div></div>
+      <div class="job-card" data-aos="fade-up" data-aos-delay="0"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80" alt=""/><div class="job-card-body"><h3>🐎 Конник-инструктор</h3><p>Тары-Аюсай и Санаторий Ак Бастау. Умеешь работать с лошадьми — ты нам нужен!</p></div></div>
+      <div class="job-card" data-aos="fade-up" data-aos-delay="150"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80" alt=""/><div class="job-card-body"><h3>📸 Контент-мейкер</h3><p>Снимаешь красивые видео и фото? Работа на свежем воздухе ждёт тебя.</p></div></div>
+      <div class="job-card" data-aos="fade-up" data-aos-delay="300"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80" alt=""/><div class="job-card-body"><h3>🌿 Гид по горным турам</h3><p>Любишь горы и хочешь делиться знаниями? Дружный коллектив!</p></div></div>
     </div>
     <div style="background:linear-gradient(135deg,var(--ed),var(--eg));border-radius:1.5rem;padding:2.5rem;max-width:600px;margin:0 auto;" data-aos="zoom-in">
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff;margin-bottom:.75rem;"><span data-i18n="jb.sl">Оплата:</span> <span id="sal-rng">8 000 — 15 000₸ / день</span></h3>
-      <p style="color:rgba(255,255,255,.8);font-size:.9rem;margin-bottom:1.5rem;" data-i18n="jb.perks">Дружный коллектив · Атмосфера уважения · Перспектива роста</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff;margin-bottom:.75rem;">Оплата: <span id="sal-rng">8 000 — 15 000₸ / день</span></h3>
+      <p style="color:rgba(255,255,255,.8);font-size:.9rem;margin-bottom:1.5rem;">Дружный коллектив · Атмосфера уважения · Перспектива роста</p>
       <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;">
-        <a id="jb-wa1" href="https://wa.me/77024175882" class="btn-gold" target="_blank" style="font-size:.85rem;padding:.75rem 1.5rem;" data-i18n="jb.wa">📲 Написать в WhatsApp</a>
+        <a id="jb-wa1" href="https://wa.me/77024175882" class="btn-gold" target="_blank" style="font-size:.85rem;padding:.75rem 1.5rem;">📲 Написать в WhatsApp</a>
         <a id="jb-wa2" href="https://wa.me/77773580323" class="soc-btn soc-wa" target="_blank">+7 773 580 3232</a>
       </div>
     </div>
@@ -475,13 +319,13 @@ footer a{color:var(--go);text-decoration:none;}
   <div class="wrap">
     <div class="contact-grid">
       <div data-aos="fade-right" data-aos-duration="800">
-        <span class="sec-eye" style="color:#e8cb5a;" data-i18n="cn.eye">Свяжитесь с нами</span>
-        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:1rem;" data-i18n="cn.title">Запишитесь на<br/>прогулку сегодня</h2>
+        <span class="sec-eye" style="color:#e8cb5a;">Свяжитесь с нами</span>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:1rem;">Запишитесь на<br/>прогулку сегодня</h2>
         <div style="width:52px;height:3px;background:var(--go);border-radius:2px;margin-bottom:2rem;"></div>
-        <div class="c-item"><div class="c-icon">📍</div><div><div style="font-weight:600;color:#fff;" data-i18n="cn.al">Адрес</div><div id="c-addr">г. Алматы, ул. Ерубаева 8/10 — Один Сиас SAQ</div></div></div>
-        <div class="c-item"><div class="c-icon">📱</div><div><div style="font-weight:600;color:#fff;" data-i18n="cn.p1l">Основной номер</div><a id="c-w1" href="https://wa.me/77024175882" style="color:rgba(255,255,255,.88);text-decoration:none;">+7 702 417 5882</a></div></div>
-        <div class="c-item"><div class="c-icon">📞</div><div><div style="font-weight:600;color:#fff;" data-i18n="cn.p2l">Доп. номер</div><a id="c-w2" href="https://wa.me/77773580323" style="color:rgba(255,255,255,.88);text-decoration:none;">+7 773 580 3232</a></div></div>
-        <div class="c-item"><div class="c-icon">🕐</div><div><div style="font-weight:600;color:#fff;" data-i18n="cn.hl">Режим работы</div><div id="c-hrs">Ежедневно с 8:00 до 20:00</div></div></div>
+        <div class="c-item"><div class="c-icon">📍</div><div><div style="font-weight:600;color:#fff;">Адрес</div><div id="c-addr">г. Алматы, ул. Ерубаева 8/10 — Один Сиас SAQ</div></div></div>
+        <div class="c-item"><div class="c-icon">📱</div><div><div style="font-weight:600;color:#fff;">Основной номер</div><a id="c-w1" href="https://wa.me/77024175882" style="color:rgba(255,255,255,.88);text-decoration:none;">+7 702 417 5882</a></div></div>
+        <div class="c-item"><div class="c-icon">📞</div><div><div style="font-weight:600;color:#fff;">Доп. номер</div><a id="c-w2" href="https://wa.me/77773580323" style="color:rgba(255,255,255,.88);text-decoration:none;">+7 773 580 3232</a></div></div>
+        <div class="c-item"><div class="c-icon">🕐</div><div><div style="font-weight:600;color:#fff;">Режим работы</div><div id="c-hrs">Ежедневно с 8:00 до 20:00</div></div></div>
         <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;">
           <a id="s-wa" href="https://wa.me/77024175882" class="soc-btn soc-wa" target="_blank">📱 WhatsApp</a>
           <a id="s-ig" href="https://www.instagram.com/saq_kundyz?igsh=cXI4ZWY5YnFzc2t6" class="soc-btn soc-ig" target="_blank">📸 Instagram</a>
@@ -490,25 +334,25 @@ footer a{color:var(--go);text-decoration:none;}
         </div>
       </div>
       <div class="form-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--ed);margin-bottom:.5rem;" data-i18n="fm.title">Оставьте заявку</h3>
-        <p style="color:#777;font-size:.85rem;margin-bottom:2rem;" data-i18n="fm.sub">Мы свяжемся с вами в течение 30 минут</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--ed);margin-bottom:.5rem;">Оставьте заявку</h3>
+        <p style="color:#777;font-size:.85rem;margin-bottom:2rem;">Мы свяжемся с вами в течение 30 минут</p>
         <div style="display:flex;flex-direction:column;gap:1.2rem;">
-          <div><label class="f-label" data-i18n="fm.name">Ваше имя</label><input type="text" class="f-input" placeholder="Айгерим Сейткали"/></div>
-          <div><label class="f-label" data-i18n="fm.phone">Телефон</label><input type="tel" class="f-input" placeholder="+7 (___) ___-__-__"/></div>
-          <div><label class="f-label" data-i18n="fm.svc">Услуга</label>
+          <div><label class="f-label">Ваше имя</label><input type="text" class="f-input" placeholder="Айгерим Сейткали"/></div>
+          <div><label class="f-label">Телефон</label><input type="tel" class="f-input" placeholder="+7 (___) ___-__-__"/></div>
+          <div><label class="f-label">Услуга</label>
             <select class="f-input">
-              <option data-i18n="fm.ch">Выберите услугу...</option>
-              <option data-i18n="sv.1">Конная прогулка</option>
-              <option data-i18n="sv.2">Конный тур</option>
-              <option data-i18n="sv.4">Обучение стрельбе</option>
-              <option data-i18n="sv.5">Обучение верховой езде</option>
-              <option data-i18n="sv.3">Видеосъёмка</option>
-              <option data-i18n="sv.6">Тимбилдинг</option>
+              <option>Выберите услугу...</option>
+              <option>Конная прогулка</option>
+              <option>Конный тур</option>
+              <option>Обучение стрельбе</option>
+              <option>Обучение верховой езде</option>
+              <option>Видеосъёмка</option>
+              <option>Тимбилдинг</option>
             </select>
           </div>
-          <div><label class="f-label" data-i18n="fm.msg">Сообщение</label><textarea class="f-input" rows="4" placeholder="Расскажите о запросе, количестве человек или дате..."></textarea></div>
-          <a id="fm-wa" href="https://wa.me/77024175882" class="btn-book" target="_blank" style="font-size:.9rem;padding:1rem;" data-i18n="fm.send">📲 Отправить через WhatsApp</a>
-          <p style="text-align:center;font-size:.75rem;color:#aaa;" data-i18n="fm.consent">Нажимая кнопку, вы соглашаетесь с условиями обработки данных</p>
+          <div><label class="f-label">Сообщение</label><textarea class="f-input" rows="4" placeholder="Расскажите о запросе, количестве человек или дате..."></textarea></div>
+          <a id="fm-wa" href="https://wa.me/77024175882" class="btn-book" target="_blank" style="font-size:.9rem;padding:1rem;">📲 Отправить через WhatsApp</a>
+          <p style="text-align:center;font-size:.75rem;color:#aaa;">Нажимая кнопку, вы соглашаетесь с условиями обработки данных</p>
         </div>
       </div>
     </div>
@@ -559,94 +403,91 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 });
 
 // ═══════════ TRANSLATIONS ═══════════
-const T={
-ru:{
-  'nav.about':'О нас','nav.ride':'Прогулка','nav.svc':'Услуги','nav.gal':'Галерея','nav.cnt':'Контакты',
-  'adm.btn':'Редактор',
-  'hero.cta':'Записаться на прогулку','hero.more':'Узнать больше',
-  'ab.eye':'О нас','ab.title':'Здесь живёт<br/>дух степей',
-  'ch.r':'Конные прогулки','ch.a':'Стрельба из лука','ch.v':'Видеосъёмка','ch.e':'Этнонаряды','ch.c':'Киновечер у костра','ch.t':'Горные туры',
-  'ri.eye':'Что входит в прогулку','ri.title':'Полный пакет впечатлений',
-  'ri.c1':'🐎 Конная прогулка','ri.c1d':'Верховая прогулка по живописным холмам с видом на горы и город.',
-  'ri.c2':'🏹 Стрельба из лука','ri.c2d':'Древнее казахское искусство под руководством опытного инструктора.',
-  'ri.c3':'👘 Этнонаряды','ri.c3d':'Традиционные казахские костюмы для незабываемых фотографий.',
-  'ri.c4':'☕ Чай + хот дог у костра','ri.c4d':'Горячий чай и хот дог у открытого огня после прогулки.',
-  'sv.eye':'Наши услуги','sv.title':'Выберите свой формат',
-  'sv.1':'Конная прогулка','sv.1l':'Основная услуга','sv.1s':'За человека / 1 час','sv.1f1':'Инструктор в комплекте','sv.1f2':'Стрельба из лука','sv.1f3':'Этнонаряды','sv.1f4':'Горячий чай у костра','sv.1f5':'Съёмка на ваш телефон',
-  'sv.2':'Конный тур','sv.2l':'Расширенный формат','sv.2s':'За человека / полдня','sv.2f1':'Горный маршрут','sv.2f2':'Всё включено из базового','sv.2f3':'Киновечер под открытым небом','sv.2f4':'Этнонаряды + фотосессия','sv.2f5':'Профессиональная съёмка',
-  'sv.3':'Видеосъёмка','sv.3l':'Профессиональное','sv.3s':'Профессиональная съёмка','sv.3f1':'Видеосъёмка на лошади','sv.3f2':'Фото в этнонаряде','sv.3f3':'Монтаж и обработка','sv.3f4':'Контент для соцсетей','sv.3f5':'Вид на горы и город',
-  'sv.4':'Обучение стрельбе','sv.4l':'Индивидуально / группа','sv.4s':'За человека / урок','sv.4f1':'Базовый курс лучника','sv.4f2':'Традиционный казахский лук','sv.4f3':'Инструктор по стрельбе','sv.4f4':'Для детей и взрослых','sv.4f5':'Сертификат участника',
-  'sv.5':'Обучение верховой езде','sv.5l':'Обучение (ВЕ)','sv.5s':'За занятие','sv.5f1':'Для начинающих и продвинутых','sv.5f2':'Опытный инструктор ВЕ','sv.5f3':'Ухоженные лошади','sv.5f4':'Индивидуальный подход','sv.5f5':'Группы и личные занятия',
-  'sv.6':'Тимбилдинг','sv.6l':'Для компаний','sv.6p':'По запросу','sv.6s':'От 5 человек','sv.6f1':'Конные активности для команды','sv.6f2':'Стрельба из лука на время','sv.6f3':'Конное шоу','sv.6f4':'Фуршет и костёр','sv.6f5':'Корпоративное фото/видео',
-  'badge.h':'Хит','btn.bk':'Записаться','btn.ds':'Обсудить',
-  'gl.eye':'Галерея','gl.title':'Ваши моменты с нами','gl.ig':'📸 Больше фото в Instagram',
-  'gl.0':'Наши лошади','gl.1':'Конная прогулка','gl.2':'Закат в горах','gl.3':'Красавцы','gl.4':'Горные тропы','gl.5':'Вид на город',
-  'jb.eye':'Карьера','jb.title':'Присоединяйтесь к команде','jb.desc':'Мы ищем конника-инструктора в команду единомышленников, влюблённых в природу и лошадей. Работа в горах, на свежем воздухе.',
-  'jb.j1':'🐎 Конник-инструктор','jb.j1d':'Тары-Аюсай и Санаторий Ак Бастау. Умеешь работать с лошадьми — ты нам нужен!',
-  'jb.j2':'📸 Контент-мейкер','jb.j2d':'Снимаешь красивые видео и фото? Работа на свежем воздухе ждёт тебя.',
-  'jb.j3':'🌿 Гид по горным турам','jb.j3d':'Любишь горы и хочешь делиться знаниями? Дружный коллектив!',
-  'jb.sl':'Оплата:','jb.perks':'Дружный коллектив · Атмосфера уважения · Перспектива роста','jb.wa':'📲 Написать в WhatsApp',
-  'cn.eye':'Свяжитесь с нами','cn.title':'Запишитесь на<br/>прогулку сегодня','cn.al':'Адрес','cn.p1l':'Основной номер','cn.p2l':'Доп. номер','cn.hl':'Режим работы',
-  'fm.title':'Оставьте заявку','fm.sub':'Мы свяжемся с вами в течение 30 минут','fm.name':'Ваше имя','fm.phone':'Телефон','fm.svc':'Услуга','fm.ch':'Выберите услугу...','fm.msg':'Сообщение','fm.send':'📲 Отправить через WhatsApp','fm.consent':'Нажимая кнопку, вы соглашаетесь с условиями обработки данных'
-},
-kz:{
-  'nav.about':'Біз туралы','nav.ride':'Серуен','nav.svc':'Қызметтер','nav.gal':'Галерея','nav.cnt':'Байланыс',
-  'adm.btn':'Редактор',
-  'hero.cta':'Тіркелу','hero.more':'Толығырақ',
-  'ab.eye':'Біз туралы','ab.title':'Мұнда дала рухы<br/>тіршілік етеді',
-  'ch.r':'Ат серуені','ch.a':'Садақ ату','ch.v':'Бейнежазу','ch.e':'Этно киімдер','ch.c':'Отты кино кеші','ch.t':'Тау турлары',
-  'ri.eye':'Серуенге не кіреді','ri.title':'Толық тәжірибе пакеті',
-  'ri.c1':'🐎 Ат серуені','ri.c1d':'Тау мен қала көрінісімен жағымды жерлер арқылы ат серуені.',
-  'ri.c2':'🏹 Садақ ату','ri.c2d':'Тәжірибелі нұсқаушы басшылығымен ежелгі қазақ өнерін сынаңыз.',
-  'ri.c3':'👘 Этно киімдер','ri.c3d':'Ұмытылмас суреттер үшін дәстүрлі қазақ киімдерін киіңіз.',
-  'ri.c4':'☕ Шай + хот-дог','ri.c4d':'Ашық отта ыстық шай мен хот-дог — серуеннен кейінгі жайлылық.',
-  'sv.eye':'Біздің қызметтер','sv.title':'Өз форматыңызды таңдаңыз',
-  'sv.1':'Ат серуені','sv.1l':'Негізгі қызмет','sv.1s':'Адам / 1 сағат','sv.1f1':'Нұсқаушы кіреді','sv.1f2':'Садақ ату','sv.1f3':'Этно киімдер','sv.1f4':'Отта ыстық шай','sv.1f5':'Телефонға түсіру',
-  'sv.2':'Ат туры','sv.2l':'Кеңейтілген формат','sv.2s':'Адам / жарты күн','sv.2f1':'Тау маршруты','sv.2f2':'Негізгіден бәрі кіреді','sv.2f3':'Ашық аспан астында кино','sv.2f4':'Этно киімдер + фотосессия','sv.2f5':'Кәсіби түсіру',
-  'sv.3':'Бейнежазу','sv.3l':'Кәсіби','sv.3s':'Кәсіби түсіру','sv.3f1':'Атта бейне түсіру','sv.3f2':'Этно киімде фото','sv.3f3':'Монтаж және өңдеу','sv.3f4':'Әлеуметтік желілерге контент','sv.3f5':'Тау мен қала көрінісі',
-  'sv.4':'Садақ ату оқыту','sv.4l':'Жеке / топ','sv.4s':'Адам / сабақ','sv.4f1':'Садақшының базалық курсы','sv.4f2':'Дәстүрлі қазақ садағы','sv.4f3':'Садақ ату нұсқаушысы','sv.4f4':'Балалар мен ересектерге','sv.4f5':'Қатысушы сертификаты',
-  'sv.5':'Ат мінуге үйрету','sv.5l':'Үйрету (ВЕ)','sv.5s':'Сабақ үшін','sv.5f1':'Жаңадан бастаушылар мен тәжірибелілерге','sv.5f2':'Тәжірибелі нұсқаушы','sv.5f3':'Күтімдегі жылқылар','sv.5f4':'Жеке тәсіл','sv.5f5':'Топ және жеке сабақтар',
-  'sv.6':'Тимбилдинг','sv.6l':'Компаниялар үшін','sv.6p':'Сұрау бойынша','sv.6s':'5 адамнан','sv.6f1':'Команда үшін ат белсенділіктері','sv.6f2':'Уақытқа садақ ату','sv.6f3':'Ат шоу','sv.6f4':'Фуршет және от','sv.6f5':'Корпоративті фото/бейне',
-  'badge.h':'Хит','btn.bk':'Тіркелу','btn.ds':'Талқылау',
-  'gl.eye':'Галерея','gl.title':'Сіздің бізбен сәттеріңіз','gl.ig':'📸 Instagramda көбірек фото',
-  'gl.0':'Біздің жылқылар','gl.1':'Ат серуені','gl.2':'Тауда күн батысы','gl.3':'Сұлу жылқылар','gl.4':'Тау жолдары','gl.5':'Қала көрінісі',
-  'jb.eye':'Мансап','jb.title':'Командаға қосылыңыз','jb.desc':'Табиғат пен жылқыны жақсы көретін командаға конник-нұсқаушы іздейміз.',
-  'jb.j1':'🐎 Конник-нұсқаушы','jb.j1d':'Тары-Аюсай мен Ақ Бастау санаторийі. Жылқымен жұмыс ұнайды ма?',
-  'jb.j2':'📸 Контент-мейкер','jb.j2d':'Сұлу бейне мен фото түсіресіз бе? Таза ауада жұмыс күтеді.',
-  'jb.j3':'🌿 Тау туры гиді','jb.j3d':'Тауды жақсы көресіз бе? Ынтымақты ұжым мен өсу перспективасы!',
-  'jb.sl':'Төлем:','jb.perks':'Ынтымақты ұжым · Сыйластық · Өсу перспективасы','jb.wa':'📲 WhatsApp-қа жазу',
-  'cn.eye':'Бізбен байланысыңыз','cn.title':'Бүгін серуенге<br/>тіркеліңіз','cn.al':'Мекенжай','cn.p1l':'Негізгі нөмір','cn.p2l':'Қосымша нөмір','cn.hl':'Жұмыс режимі',
-  'fm.title':'Өтінім қалдырыңыз','fm.sub':'30 минут ішінде хабарласамыз','fm.name':'Сіздің атыңыз','fm.phone':'Телефон','fm.svc':'Қызмет','fm.ch':'Қызметті таңдаңыз...','fm.msg':'Хабарлама','fm.send':'📲 WhatsApp арқылы жіберу','fm.consent':'Түймені басу арқылы деректерді өңдеу шарттарымен келісесіз'
-},
-en:{
-  'nav.about':'About','nav.ride':'Ride','nav.svc':'Services','nav.gal':'Gallery','nav.cnt':'Contact',
-  'adm.btn':'Editor',
-  'hero.cta':'Book a Ride','hero.more':'Learn More',
-  'ab.eye':'About Us','ab.title':'Where the steppe<br/>spirit lives',
-  'ch.r':'Horse Rides','ch.a':'Archery','ch.v':'Video Shooting','ch.e':'Ethnic Costumes','ch.c':'Movie Night by Fire','ch.t':'Mountain Tours',
-  'ri.eye':'What's included','ri.title':'Full Experience Package',
-  'ri.c1':'🐎 Horse Ride','ri.c1d':'A scenic horseback ride through beautiful hills with mountain and city views.',
-  'ri.c2':'🏹 Archery','ri.c2d':'Try the ancient Kazakh art under the guidance of an experienced instructor.',
-  'ri.c3':'👘 Ethnic Costumes','ri.c3d':'Dress in traditional Kazakh costumes for unforgettable photos.',
-  'ri.c4':'☕ Tea + Hot Dog by Fire','ri.c4d':'Hot tea and hot dog by the open fire after the ride.',
-  'sv.eye':'Our Services','sv.title':'Choose Your Format',
-  'sv.1':'Horse Ride','sv.1l':'Main Service','sv.1s':'Per person / 1 hour','sv.1f1':'Instructor included','sv.1f2':'Archery','sv.1f3':'Ethnic Costumes','sv.1f4':'Hot tea by fire','sv.1f5':'Shooting on your phone',
-  'sv.2':'Horse Tour','sv.2l':'Extended Format','sv.2s':'Per person / half day','sv.2f1':'Mountain route','sv.2f2':'All basic included','sv.2f3':'Outdoor movie night','sv.2f4':'Ethnic costumes + photoshoot','sv.2f5':'Professional filming',
-  'sv.3':'Video Shooting','sv.3l':'Professional','sv.3s':'Professional filming','sv.3f1':'Video on horseback','sv.3f2':'Photo in ethnic costume','sv.3f3':'Editing and processing','sv.3f4':'Content for social media','sv.3f5':'Mountain & city views',
-  'sv.4':'Archery Training','sv.4l':'Individual / Group','sv.4s':'Per person / lesson','sv.4f1':'Basic archer course','sv.4f2':'Traditional Kazakh bow','sv.4f3':'Archery instructor','sv.4f4':'For kids and adults','sv.4f5':'Participation certificate',
-  'sv.5':'Horse Riding Lessons','sv.5l':'Equestrian Training','sv.5s':'Per session','sv.5f1':'Beginner to advanced','sv.5f2':'Experienced instructor','sv.5f3':'Well-groomed horses','sv.5f4':'Individual approach','sv.5f5':'Group and private lessons',
-  'sv.6':'Team Building','sv.6l':'For Companies','sv.6p':'On request','sv.6s':'From 5 people','sv.6f1':'Equestrian team activities','sv.6f2':'Timed archery','sv.6f3':'Horse show','sv.6f4':'Buffet and bonfire','sv.6f5':'Corporate photo/video',
-  'badge.h':'Top','btn.bk':'Book Now','btn.ds':'Discuss',
-  'gl.eye':'Gallery','gl.title':'Your moments with us','gl.ig':'📸 More photos on Instagram',
-  'gl.0':'Our horses','gl.1':'Horse ride','gl.2':'Sunset in the mountains','gl.3':'Beautiful horses','gl.4':'Mountain trails','gl.5':'City view',
-  'jb.eye':'Careers','jb.title':'Join Our Team','jb.desc':'We are looking for an equestrian instructor to join a team of like-minded people who love nature and horses. Work in the mountains, fresh air.',
-  'jb.j1':'🐎 Horse Instructor','jb.j1d':'Tary-Ayusai and Ak Bastau Sanatorium. Can you work with horses? We need you!',
-  'jb.j2':'📸 Content Creator','jb.j2d':'Do you shoot beautiful videos and photos? Work outdoors awaits you.',
-  'jb.j3':'🌿 Mountain Tour Guide','jb.j3d':'Love mountains and want to share your knowledge? Friendly team!',
-  'jb.sl':'Salary:','jb.perks':'Friendly team · Respectful atmosphere · Growth prospects','jb.wa':'📲 Message on WhatsApp',
-  'cn.eye':'Contact Us','cn.title':'Book your ride<br/>today','cn.al':'Address','cn.p1l':'Main Number','cn.p2l':'Alt. Number','cn.hl':'Working Hours',
-  'fm.title':'Leave a Request','fm.sub':'We'll contact you within 30 minutes','fm.name':'Your Name','fm.phone':'Phone','fm.svc':'Service','fm.ch':'Choose a service...','fm.msg':'Message','fm.send':'📲 Send via WhatsApp','fm.consent':'By clicking the button you agree to the data processing terms'
-}
+const T = {
+  ru: {
+    'nav.about':'О нас','nav.ride':'Прогулка','nav.svc':'Услуги','nav.gal':'Галерея','nav.cnt':'Контакты',
+    'hero.cta':'Записаться на прогулку','hero.more':'Узнать больше',
+    'ab.eye':'О нас','ab.title':'Здесь живёт<br/>дух степей',
+    'ch.r':'Конные прогулки','ch.a':'Стрельба из лука','ch.v':'Видеосъёмка','ch.e':'Этнонаряды','ch.c':'Киновечер у костра','ch.t':'Горные туры',
+    'ri.eye':'Что входит в прогулку','ri.title':'Полный пакет впечатлений',
+    'ri.c1':'🐎 Конная прогулка','ri.c1d':'Верховая прогулка по живописным холмам с видом на горы и город.',
+    'ri.c2':'🏹 Стрельба из лука','ri.c2d':'Древнее казахское искусство под руководством опытного инструктора.',
+    'ri.c3':'👘 Этнонаряды','ri.c3d':'Традиционные казахские костюмы для незабываемых фотографий.',
+    'ri.c4':'☕ Чай + хот дог у костра','ri.c4d':'Горячий чай и хот дог у открытого огня после прогулки.',
+    'sv.eye':'Наши услуги','sv.title':'Выберите свой формат',
+    'sv.1':'Конная прогулка','sv.1l':'Основная услуга','sv.1s':'За человека / 1 час','sv.1f1':'Инструктор в комплекте','sv.1f2':'Стрельба из лука','sv.1f3':'Этнонаряды','sv.1f4':'Горячий чай у костра','sv.1f5':'Съёмка на ваш телефон',
+    'sv.2':'Конный тур','sv.2l':'Расширенный формат','sv.2s':'За человека / полдня','sv.2f1':'Горный маршрут','sv.2f2':'Всё включено из базового','sv.2f3':'Киновечер под открытым небом','sv.2f4':'Этнонаряды + фотосессия','sv.2f5':'Профессиональная съёмка',
+    'sv.3':'Видеосъёмка','sv.3l':'Профессиональное','sv.3s':'Профессиональная съёмка','sv.3f1':'Видеосъёмка на лошади','sv.3f2':'Фото в этнонаряде','sv.3f3':'Монтаж и обработка','sv.3f4':'Контент для соцсетей','sv.3f5':'Вид на горы и город',
+    'sv.4':'Обучение стрельбе','sv.4l':'Индивидуально / группа','sv.4s':'За человека / урок','sv.4f1':'Базовый курс лучника','sv.4f2':'Традиционный казахский лук','sv.4f3':'Инструктор по стрельбе','sv.4f4':'Для детей и взрослых','sv.4f5':'Сертификат участника',
+    'sv.5':'Обучение верховой езде','sv.5l':'Обучение (ВЕ)','sv.5s':'За занятие','sv.5f1':'Для начинающих и продвинутых','sv.5f2':'Опытный инструктор ВЕ','sv.5f3':'Ухоженные лошади','sv.5f4':'Индивидуальный подход','sv.5f5':'Группы и личные занятия',
+    'sv.6':'Тимбилдинг','sv.6l':'Для компаний','sv.6p':'По запросу','sv.6s':'От 5 человек','sv.6f1':'Конные активности для команды','sv.6f2':'Стрельба из лука на время','sv.6f3':'Конное шоу','sv.6f4':'Фуршет и костёр','sv.6f5':'Корпоративное фото/видео',
+    'badge.h':'Хит','btn.bk':'Записаться','btn.ds':'Обсудить',
+    'gl.eye':'Галерея','gl.title':'Ваши моменты с нами','gl.ig':'📸 Больше фото в Instagram',
+    'gl.0':'Наши лошади','gl.1':'Конная прогулка','gl.2':'Закат в горах','gl.3':'Красавцы','gl.4':'Горные тропы','gl.5':'Вид на город',
+    'jb.eye':'Карьера','jb.title':'Присоединяйтесь к команде','jb.desc':'Мы ищем конника-инструктора в команду единомышленников, влюблённых в природу и лошадей. Работа в горах, на свежем воздухе.',
+    'jb.j1':'🐎 Конник-инструктор','jb.j1d':'Тары-Аюсай и Санаторий Ак Бастау. Умеешь работать с лошадьми — ты нам нужен!',
+    'jb.j2':'📸 Контент-мейкер','jb.j2d':'Снимаешь красивые видео и фото? Работа на свежем воздухе ждёт тебя.',
+    'jb.j3':'🌿 Гид по горным турам','jb.j3d':'Любишь горы и хочешь делиться знаниями? Дружный коллектив!',
+    'jb.sl':'Оплата:','jb.perks':'Дружный коллектив · Атмосфера уважения · Перспектива роста','jb.wa':'📲 Написать в WhatsApp',
+    'cn.eye':'Свяжитесь с нами','cn.title':'Запишитесь на<br/>прогулку сегодня','cn.al':'Адрес','cn.p1l':'Основной номер','cn.p2l':'Доп. номер','cn.hl':'Режим работы',
+    'fm.title':'Оставьте заявку','fm.sub':'Мы свяжемся с вами в течение 30 минут','fm.name':'Ваше имя','fm.phone':'Телефон','fm.svc':'Услуга','fm.ch':'Выберите услугу...','fm.msg':'Сообщение','fm.send':'📲 Отправить через WhatsApp','fm.consent':'Нажимая кнопку, вы соглашаетесь с условиями обработки данных'
+  },
+  kz: {
+    'nav.about':'Біз туралы','nav.ride':'Серуен','nav.svc':'Қызметтер','nav.gal':'Галерея','nav.cnt':'Байланыс',
+    'hero.cta':'Тіркелу','hero.more':'Толығырақ',
+    'ab.eye':'Біз туралы','ab.title':'Мұнда дала рухы<br/>тіршілік етеді',
+    'ch.r':'Ат серуені','ch.a':'Садақ ату','ch.v':'Бейнежазу','ch.e':'Этно киімдер','ch.c':'Отты кино кеші','ch.t':'Тау турлары',
+    'ri.eye':'Серуенге не кіреді','ri.title':'Толық тәжірибе пакеті',
+    'ri.c1':'🐎 Ат серуені','ri.c1d':'Тау мен қала көрінісімен жағымды жерлер арқылы ат серуені.',
+    'ri.c2':'🏹 Садақ ату','ri.c2d':'Тәжірибелі нұсқаушы басшылығымен ежелгі қазақ өнерін сынаңыз.',
+    'ri.c3':'👘 Этно киімдер','ri.c3d':'Ұмытылмас суреттер үшін дәстүрлі қазақ киімдерін киіңіз.',
+    'ri.c4':'☕ Шай + хот-дог','ri.c4d':'Ашық отта ыстық шай мен хот-дог — серуеннен кейінгі жайлылық.',
+    'sv.eye':'Біздің қызметтер','sv.title':'Өз форматыңызды таңдаңыз',
+    'sv.1':'Ат серуені','sv.1l':'Негізгі қызмет','sv.1s':'Адам / 1 сағат','sv.1f1':'Нұсқаушы кіреді','sv.1f2':'Садақ ату','sv.1f3':'Этно киімдер','sv.1f4':'Отта ыстық шай','sv.1f5':'Телефонға түсіру',
+    'sv.2':'Ат туры','sv.2l':'Кеңейтілген формат','sv.2s':'Адам / жарты күн','sv.2f1':'Тау маршруты','sv.2f2':'Негізгіден бәрі кіреді','sv.2f3':'Ашық аспан астында кино','sv.2f4':'Этно киімдер + фотосессия','sv.2f5':'Кәсіби түсіру',
+    'sv.3':'Бейнежазу','sv.3l':'Кәсіби','sv.3s':'Кәсіби түсіру','sv.3f1':'Атта бейне түсіру','sv.3f2':'Этно киімде фото','sv.3f3':'Монтаж және өңдеу','sv.3f4':'Әлеуметтік желілерге контент','sv.3f5':'Тау мен қала көрінісі',
+    'sv.4':'Садақ ату оқыту','sv.4l':'Жеке / топ','sv.4s':'Адам / сабақ','sv.4f1':'Садақшының базалық курсы','sv.4f2':'Дәстүрлі қазақ садағы','sv.4f3':'Садақ ату нұсқаушысы','sv.4f4':'Балалар мен ересектерге','sv.4f5':'Қатысушы сертификаты',
+    'sv.5':'Ат мінуге үйрету','sv.5l':'Үйрету (ВЕ)','sv.5s':'Сабақ үшін','sv.5f1':'Жаңадан бастаушылар мен тәжірибелілерге','sv.5f2':'Тәжірибелі нұсқаушы','sv.5f3':'Күтімдегі жылқылар','sv.5f4':'Жеке тәсіл','sv.5f5':'Топ және жеке сабақтар',
+    'sv.6':'Тимбилдинг','sv.6l':'Компаниялар үшін','sv.6p':'Сұрау бойынша','sv.6s':'5 адамнан','sv.6f1':'Команда үшін ат белсенділіктері','sv.6f2':'Уақытқа садақ ату','sv.6f3':'Ат шоу','sv.6f4':'Фуршет және от','sv.6f5':'Корпоративті фото/бейне',
+    'badge.h':'Хит','btn.bk':'Тіркелу','btn.ds':'Талқылау',
+    'gl.eye':'Галерея','gl.title':'Сіздің бізбен сәттеріңіз','gl.ig':'📸 Instagramda көбірек фото',
+    'gl.0':'Біздің жылқылар','gl.1':'Ат серуені','gl.2':'Тауда күн батысы','gl.3':'Сұлу жылқылар','gl.4':'Тау жолдары','gl.5':'Қала көрінісі',
+    'jb.eye':'Мансап','jb.title':'Командаға қосылыңыз','jb.desc':'Табиғат пен жылқыны жақсы көретін командаға конник-нұсқаушы іздейміз.',
+    'jb.j1':'🐎 Конник-нұсқаушы','jb.j1d':'Тары-Аюсай мен Ақ Бастау санаторийі. Жылқымен жұмыс ұнайды ма?',
+    'jb.j2':'📸 Контент-мейкер','jb.j2d':'Сұлу бейне мен фото түсіресіз бе? Таза ауада жұмыс күтеді.',
+    'jb.j3':'🌿 Тау туры гиді','jb.j3d':'Тауды жақсы көресіз бе? Ынтымақты ұжым мен өсу перспективасы!',
+    'jb.sl':'Төлем:','jb.perks':'Ынтымақты ұжым · Сыйластық · Өсу перспективасы','jb.wa':'📲 WhatsApp-қа жазу',
+    'cn.eye':'Бізбен байланысыңыз','cn.title':'Бүгін серуенге<br/>тіркеліңіз','cn.al':'Мекенжай','cn.p1l':'Негізгі нөмір','cn.p2l':'Қосымша нөмір','cn.hl':'Жұмыс режимі',
+    'fm.title':'Өтінім қалдырыңыз','fm.sub':'30 минут ішінде хабарласамыз','fm.name':'Сіздің атыңыз','fm.phone':'Телефон','fm.svc':'Қызмет','fm.ch':'Қызметті таңдаңыз...','fm.msg':'Хабарлама','fm.send':'📲 WhatsApp арқылы жіберу','fm.consent':'Түймені басу арқылы деректерді өңдеу шарттарымен келісесіз'
+  },
+  en: {
+    'nav.about':'About','nav.ride':'Ride','nav.svc':'Services','nav.gal':'Gallery','nav.cnt':'Contact',
+    'hero.cta':'Book a Ride','hero.more':'Learn More',
+    'ab.eye':'About Us','ab.title':'Where the steppe<br/>spirit lives',
+    'ch.r':'Horse Rides','ch.a':'Archery','ch.v':'Video Shooting','ch.e':'Ethnic Costumes','ch.c':'Movie Night by Fire','ch.t':'Mountain Tours',
+    'ri.eye':'What\'s included','ri.title':'Full Experience Package',
+    'ri.c1':'🐎 Horse Ride','ri.c1d':'A scenic horseback ride through beautiful hills with mountain and city views.',
+    'ri.c2':'🏹 Archery','ri.c2d':'Try the ancient Kazakh art under the guidance of an experienced instructor.',
+    'ri.c3':'👘 Ethnic Costumes','ri.c3d':'Dress in traditional Kazakh costumes for unforgettable photos.',
+    'ri.c4':'☕ Tea + Hot Dog by Fire','ri.c4d':'Hot tea and hot dog by the open fire after the ride.',
+    'sv.eye':'Our Services','sv.title':'Choose Your Format',
+    'sv.1':'Horse Ride','sv.1l':'Main Service','sv.1s':'Per person / 1 hour','sv.1f1':'Instructor included','sv.1f2':'Archery','sv.1f3':'Ethnic Costumes','sv.1f4':'Hot tea by fire','sv.1f5':'Shooting on your phone',
+    'sv.2':'Horse Tour','sv.2l':'Extended Format','sv.2s':'Per person / half day','sv.2f1':'Mountain route','sv.2f2':'All basic included','sv.2f3':'Outdoor movie night','sv.2f4':'Ethnic costumes + photoshoot','sv.2f5':'Professional filming',
+    'sv.3':'Video Shooting','sv.3l':'Professional','sv.3s':'Professional filming','sv.3f1':'Video on horseback','sv.3f2':'Photo in ethnic costume','sv.3f3':'Editing and processing','sv.3f4':'Content for social media','sv.3f5':'Mountain & city views',
+    'sv.4':'Archery Training','sv.4l':'Individual / Group','sv.4s':'Per person / lesson','sv.4f1':'Basic archer course','sv.4f2':'Traditional Kazakh bow','sv.4f3':'Archery instructor','sv.4f4':'For kids and adults','sv.4f5':'Participation certificate',
+    'sv.5':'Horse Riding Lessons','sv.5l':'Equestrian Training','sv.5s':'Per session','sv.5f1':'Beginner to advanced','sv.5f2':'Experienced instructor','sv.5f3':'Well-groomed horses','sv.5f4':'Individual approach','sv.5f5':'Group and private lessons',
+    'sv.6':'Team Building','sv.6l':'For Companies','sv.6p':'On request','sv.6s':'From 5 people','sv.6f1':'Equestrian team activities','sv.6f2':'Timed archery','sv.6f3':'Horse show','sv.6f4':'Buffet and bonfire','sv.6f5':'Corporate photo/video',
+    'badge.h':'Top','btn.bk':'Book Now','btn.ds':'Discuss',
+    'gl.eye':'Gallery','gl.title':'Your moments with us','gl.ig':'📸 More photos on Instagram',
+    'gl.0':'Our horses','gl.1':'Horse ride','gl.2':'Sunset in the mountains','gl.3':'Beautiful horses','gl.4':'Mountain trails','gl.5':'City view',
+    'jb.eye':'Careers','jb.title':'Join Our Team','jb.desc':'We are looking for an equestrian instructor to join a team of like-minded people who love nature and horses. Work in the mountains, fresh air.',
+    'jb.j1':'🐎 Horse Instructor','jb.j1d':'Tary-Ayusai and Ak Bastau Sanatorium. Can you work with horses? We need you!',
+    'jb.j2':'📸 Content Creator','jb.j2d':'Do you shoot beautiful videos and photos? Work outdoors awaits you.',
+    'jb.j3':'🌿 Mountain Tour Guide','jb.j3d':'Love mountains and want to share your knowledge? Friendly team!',
+    'jb.sl':'Salary:','jb.perks':'Friendly team · Respectful atmosphere · Growth prospects','jb.wa':'📲 Message on WhatsApp',
+    'cn.eye':'Contact Us','cn.title':'Book your ride<br/>today','cn.al':'Address','cn.p1l':'Main Number','cn.p2l':'Alt. Number','cn.hl':'Working Hours',
+    'fm.title':'Leave a Request','fm.sub':'We\'ll contact you within 30 minutes','fm.name':'Your Name','fm.phone':'Phone','fm.svc':'Service','fm.ch':'Choose a service...','fm.msg':'Message','fm.send':'📲 Send via WhatsApp','fm.consent':'By clicking the button you agree to the data processing terms'
+  }
 };
 
 let currentLang = 'ru';
@@ -668,129 +509,117 @@ function setLang(lang) {
 }
 
 // ═══════════════════════════════════════════
-// ADMIN PANEL
+// 🎵 MUSIC PLAYER — Smart Autoplay + localStorage
 // ═══════════════════════════════════════════
-const DEFAULT_CFG = {
-  heroLine1:'Конные прогулки', heroLine2:'SAQ by Qundyz',
-  heroBadge:'✦ Алматы — ул. Ерубаева 8/10 ✦',
-  heroSub:'Окунитесь в мир степного духа. Всего в 7 минутах от Президентского парка — незабываемые конные прогулки, стрельба из лука и этнонаряды.',
-  stat1Num:'10 000+', stat1Lbl:'Довольных гостей',
-  stat2Num:'7+', stat2Lbl:'Лет опыта',
-  stat3Num:'7 мин', stat3Lbl:'От парка',
-  about1:'QUNDYZ SAQ — это место, где каждый гость прикасается к живой казахской традиции. Наши ухоженные лошади, опытные инструкторы и красивые локации в горах Алматы создают атмосферу, которую невозможно забыть.',
-  about2:'Мы предлагаем конные прогулки, конные туры, обучение верховой езде, стрельбу из лука и уникальные фотосессии в этнонарядах — всё в одном месте, всего в нескольких минутах от города.',
-  wa1:'77024175882', wa2:'77773580323',
-  address:'г. Алматы, ул. Ерубаева 8/10 — Один Сиас SAQ',
-  hours:'Ежедневно с 8:00 до 20:00',
-  ig:'https://www.instagram.com/saq_kundyz?igsh=cXI4ZWY5YnFzc2t6',
-  tt:'https://www.tiktok.com/@saq.qundyz',
-  twoGis:'https://2gis.kz/almaty/geo/70000001093833415/76.864960,43.157731',
-  heroImg:'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=1600&q=80',
-  aboutImg:'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80',
-  gallery:['https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=700&q=80','https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600&q=80','https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80','https://images.unsplash.com/photo-1443891522184-ffd4b5d7bb04?w=600&q=80','https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80','https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80'],
-  prices:['от 5 000₸','от 15 000₸','от 10 000₸','от 4 000₸','от 7 000₸'],
-  salary:'8 000 — 15 000₸ / день'
-};
+(function(){
+  var LS_ON  = 'saq_mp_on';
+  var LS_VOL = 'saq_mp_vol';
+  var audio    = document.getElementById('sp-audio');
+  var player   = document.getElementById('saq-player');
+  var mainBtn  = document.getElementById('sp-main');
+  var bar      = document.getElementById('sp-bar');
+  var eq       = document.getElementById('sp-eq');
+  var hint     = document.getElementById('sp-hint');
+  var muteBtn  = document.getElementById('sp-mute');
+  var volEl    = document.getElementById('sp-vol');
+  var timeEl   = document.getElementById('sp-time');
+  var playing  = false;
+  var expanded = false;
+  var muted    = false;
+  var ready    = false;
 
-let cfg = JSON.parse(JSON.stringify(DEFAULT_CFG));
+  var savedVol = parseInt(localStorage.getItem(LS_VOL)) || 45;
+  audio.volume = savedVol / 100;
+  if(volEl) volEl.value = savedVol;
 
-function buildGalleryFields(){
-  const c = document.getElementById('gal-fields');
-  c.innerHTML = '';
-  cfg.gallery.forEach((url,i)=>{
-    c.innerHTML += `
-      <div class="adm-div">Фото ${i+1}</div>
-      <div class="adm-f">
-        <label>URL</label>
-        <input id="gf-${i}" value="${url}" oninput="prevImg(this,'gp-${i}')"/>
-        <img id="gp-${i}" class="img-prev ${url?'show':''}"/>
-      </div>`;
-  });
-  setTimeout(()=>{
-    cfg.gallery.forEach((url,i)=>{
-      const img = document.getElementById('gp-'+i);
-      if(img && url){ img.src=url; img.classList.add('show'); }
-    });
-  },0);
-}
+  function setPlaying(state){
+    playing = state;
+    if(mainBtn) mainBtn.textContent = state ? '⏸' : '🎵';
+    if(eq) eq.classList.toggle('off', !state);
+  }
 
-function admOpen(){
-  const p = document.getElementById('adm-panel'), o = document.getElementById('adm-overlay');
-  p.classList.add('open'); o.classList.add('show');
-  syncAdminFields(); buildGalleryFields();
-}
-function admClose(){
-  document.getElementById('adm-panel').classList.remove('open');
-  document.getElementById('adm-overlay').classList.remove('show');
-}
+  function spExpand(){
+    expanded = true;
+    player.classList.remove('closed');
+  }
 
-function syncAdminFields(){
-  const ids = {
-    'a-h1':'heroLine1','a-h2':'heroLine2','a-hb':'heroBadge','a-hs':'heroSub',
-    'a-s1n':'stat1Num','a-s1l':'stat1Lbl','a-s2n':'stat2Num','a-s2l':'stat2Lbl','a-s3n':'stat3Num','a-s3l':'stat3Lbl',
-    'a-ab1':'about1','a-ab2':'about2',
-    'a-w1':'wa1','a-w2':'wa2','a-addr':'address','a-hrs':'hours',
-    'a-ig':'ig','a-tt':'tt','a-2g':'twoGis',
-    'a-hi':'heroImg','a-ai':'aboutImg',
-    'a-p1':'prices.0','a-p2':'prices.1','a-p3':'prices.2','a-p4':'prices.3','a-p5':'prices.4',
-    'a-sal':'salary'
+  window.spCollapse = function(){
+    expanded = false;
+    player.classList.add('closed');
   };
-  Object.entries(ids).forEach(([elId, key])=>{
-    const el = document.getElementById(elId); if(!el) return;
-    if(key.startsWith('prices.')){
-      el.value = cfg.prices[parseInt(key.split('.')[1])];
-    } else { el.value = cfg[key]||''; }
+
+  window.spMainClick = function(){
+    if(!expanded){ spExpand(); return; }
+    if(playing){
+      audio.pause();
+      localStorage.setItem(LS_ON, '0');
+    } else {
+      audio.play().catch(function(){});
+      localStorage.setItem(LS_ON, '1');
+    }
+  };
+
+  function onReady(){
+    if(ready) return;
+    ready = true;
+    if(hint){ hint.classList.add('hide'); setTimeout(function(){ hint.style.display='none'; }, 600); }
+    var stored = localStorage.getItem(LS_ON);
+    if(stored === '1' || stored === null){
+      audio.play().then(function(){
+        localStorage.setItem(LS_ON, '1');
+        if(!expanded) spExpand();
+      }).catch(function(){});
+    }
+  }
+
+  document.addEventListener('click', function(e){
+    if(player && player.contains(e.target)) return;
+    onReady();
+  }, { passive: true });
+
+  window.addEventListener('scroll', function handler(){
+    onReady();
+    window.removeEventListener('scroll', handler);
+  }, { passive: true });
+
+  document.addEventListener('touchstart', function(e){
+    if(player && player.contains(e.target)) return;
+    onReady();
+  }, { passive: true, once: true });
+
+  window.spSetVol = function(v){
+    var n = parseInt(v);
+    audio.volume = n / 100;
+    audio.muted = n === 0;
+    muted = n === 0;
+    localStorage.setItem(LS_VOL, n);
+    if(muteBtn) muteBtn.textContent = n === 0 ? '🔇' : n < 50 ? '🔉' : '🔊';
+  };
+
+  window.spToggleMute = function(){
+    muted = !muted;
+    audio.muted = muted;
+    if(muteBtn) muteBtn.textContent = muted ? '🔇' : '🔊';
+  };
+
+  window.spSeek = function(e){
+    if(!audio.duration) return;
+    var r = e.currentTarget.getBoundingClientRect();
+    audio.currentTime = ((e.clientX - r.left) / r.width) * audio.duration;
+  };
+
+  audio.addEventListener('play',  function(){ setPlaying(true); });
+  audio.addEventListener('pause', function(){ setPlaying(false); });
+  audio.addEventListener('timeupdate', function(){
+    if(!isNaN(audio.duration)){
+      var pct = (audio.currentTime / audio.duration) * 100;
+      if(bar) bar.style.width = pct + '%';
+      var m = Math.floor(audio.currentTime / 60);
+      var s = Math.floor(audio.currentTime % 60);
+      if(timeEl) timeEl.textContent = m + ':' + (s < 10 ? '0' + s : s);
+    }
   });
-}
-
-function admApply(){
-  cfg.heroLine1 = val('a-h1'); cfg.heroLine2 = val('a-h2');
-  cfg.heroBadge = val('a-hb'); cfg.heroSub = val('a-hs');
-  cfg.stat1Num = val('a-s1n'); cfg.stat1Lbl = val('a-s1l');
-  cfg.stat2Num = val('a-s2n'); cfg.stat2Lbl = val('a-s2l');
-  cfg.stat3Num = val('a-s3n'); cfg.stat3Lbl = val('a-s3l');
-  cfg.about1 = val('a-ab1'); cfg.about2 = val('a-ab2');
-  cfg.wa1 = val('a-w1'); cfg.wa2 = val('a-w2');
-  cfg.address = val('a-addr'); cfg.hours = val('a-hrs');
-  cfg.ig = val('a-ig'); cfg.tt = val('a-tt'); cfg.twoGis = val('a-2g');
-  cfg.heroImg = val('a-hi'); cfg.aboutImg = val('a-ai');
-  cfg.prices = [val('a-p1'),val('a-p2'),val('a-p3'),val('a-p4'),val('a-p5')];
-  cfg.salary = val('a-sal');
-  cfg.gallery = cfg.gallery.map((_,i)=> { const el=document.getElementById('gf-'+i); return el?el.value:_; });
-  renderCfg();
-  showToast('✅ Изменения применены!');
-}
-
-function val(id){ const el=document.getElementById(id); return el?el.value.trim():''; }
-
-function renderCfg(){
-  setText('h-l1', cfg.heroLine1); setText('h-l2', cfg.heroLine2);
-  setText('h-badge', cfg.heroBadge); setText('h-sub', cfg.heroSub);
-  setText('s1n', cfg.stat1Num); setText('s1l', cfg.stat1Lbl);
-  setText('s2n', cfg.stat2Num); setText('s2l', cfg.stat2Lbl);
-  setText('s3n', cfg.stat3Num); setText('s3l', cfg.stat3Lbl);
-  setText('ab-t1', cfg.about1); setText('ab-t2', cfg.about2);
-  setText('c-addr', cfg.address); setText('c-hrs', cfg.hours);
-  setText('sal-rng', cfg.salary);
-  setText('ft-copy', `г. Алматы, ${cfg.address} · +7 ${fmt(cfg.wa1)}<br/>© ${new Date().getFullYear()} SAQ by Qundyz.`);
-
-  cfg.prices.forEach((p,i)=>setText(`p${i+1}`, p));
-
-  document.querySelector('.hero').style.backgroundImage =
-    `linear-gradient(135deg,rgba(27,67,50,.72) 0%,rgba(62,39,35,.5) 100%), url('${cfg.heroImg}')`;
-
-  const ai = document.getElementById('about-img'); if(ai) ai.src = cfg.aboutImg;
-
-  cfg.gallery.forEach((url,i)=>{ const img=document.getElementById('gi'+i); if(img&&url) img.src=url; });
-
-  const wa1Url = `https://wa.me/${cfg.wa1}`;
-  const wa2Url = `https://wa.me/${cfg.wa2}`;
-  document.querySelectorAll('.wa-link').forEach(a=>{ a.href=wa1Url; });
-  setHref('hero-wa', wa1Url);
-  setHref('c-w1', wa1Url); setHref('c-w2', wa2Url);
-  setHref('jb-wa1', wa1Url); setHref('jb-wa2', wa2Url);
-  setHref('s-wa', wa1Url); setHref('ft-wa', wa1Url);
-  setText('c-w1', `+7 ${fmt(cfg.wa1)}`);
-  setText('c-w2', `+7 ${fmt(cfg.wa2)}`);
-  setHref('jb-wa2', wa2Url);
-  if(document.querySelector('#jb-wa2')) document.querySelector('#jb-wa2').tex
+})();
+</script>
+</body>
+</html>
