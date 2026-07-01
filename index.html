@@ -100,7 +100,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(15,23,42,.94
 .nav-cta:hover{background:var(--gl);transform:translateY(-1px);}
 
 /* HERO */
-.hero{min-height:100vh;background:linear-gradient(135deg,rgba(11,17,32,.85),rgba(26,36,54,.7)),url('https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=1600&q=80') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;}
+.hero{min-height:100vh;background:linear-gradient(135deg,rgba(8,13,26,.88) 0%,rgba(11,17,32,.75) 40%,rgba(17,24,39,.6) 100%),url('https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=1600&q=80') center/cover no-repeat fixed;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,var(--bg-main),transparent);}
 .hero-inner{position:relative;z-index:1;padding:7rem 1.5rem 4rem;max-width:760px;margin:0 auto;}
 .hero-badge{display:inline-block;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.4);color:var(--gl);font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:.35rem 1rem;border-radius:50px;margin-bottom:1.5rem;}
@@ -114,6 +114,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(15,23,42,.94
 .btn-gold:hover{background:var(--gl);transform:translateY(-2px);box-shadow:0 8px 32px rgba(212,175,55,.4);}
 .btn-ghost{border:2px solid rgba(255,255,255,.4);color:#fff;padding:.9rem 2rem;border-radius:50px;font-weight:500;font-size:.9rem;text-decoration:none;display:inline-block;margin-left:1rem;transition:all .2s;}
 .btn-ghost:hover{border-color:var(--go);background:rgba(212,175,55,.1);}
+
+/* Hero gold accent animation */
+.hero-gold-line{width:60px;height:2px;background:var(--go);border-radius:2px;margin:1rem auto;animation:goldPulse 2s ease-in-out infinite;opacity:.8;}
+.hero-gold-line.l{margin:1rem 0;}
+@keyframes goldPulse{0%,100%{opacity:.6;width:60px}50%{opacity:1;width:80px}}
+
+/* Nav scroll shrink */
+nav.scrolled{padding:.4rem 1.5rem;}
+nav.scrolled .nav-logo{font-size:1rem;}
+nav.scrolled .nav-cta{padding:.3rem .85rem;font-size:.7rem;}
+nav.scrolled .lang-btn{padding:.2rem .5rem;font-size:.65rem;}
 
 /* SECTION COMMONS */
 .sec-eye{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--go);display:block;margin-bottom:.5rem;}
@@ -168,9 +179,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(15,23,42,.94
 .gal-item.tall{grid-row:span 2;aspect-ratio:unset;}
 .gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s;display:block;}
 .gal-item:hover img{transform:scale(1.07);}
-.gal-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,17,32,.75),transparent);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:1rem;}
+.gal-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,17,32,.85),transparent 60%);opacity:0;transition:opacity .35s;display:flex;align-items:flex-end;padding:1rem;}
 .gal-item:hover .gal-ov{opacity:1;}
-.gal-ov span{color:#fff;font-size:.78rem;font-weight:500;}
+.gal-ov span{color:#fff;font-size:.8rem;font-weight:500;}
+.gal-item::after{content:'';position:absolute;inset:0;border:2px solid transparent;border-radius:1rem;transition:border-color .35s;pointer-events:none;}
+.gal-item:hover::after{border-color:rgba(212,175,55,.4);}
+.gal-item:hover img{transform:scale(1.08);filter:brightness(1.1);}
 
 /* JOBS */
 .jobs-sec{background:var(--bg-sec);padding:5rem 1.5rem;}
@@ -180,6 +194,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(15,23,42,.94
 .job-card-body{padding:1.25rem;}
 .job-card-body h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--tx-p);margin-bottom:.3rem;}
 .job-card-body p{font-size:.8rem;color:var(--tx-s);line-height:1.5;}
+
+/* TESTIMONIALS */
+.test-sec{background:var(--bg-deep);padding:5rem 1.5rem;position:relative;}
+.test-sec::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:repeating-linear-gradient(90deg,transparent,transparent 12px,rgba(212,175,55,.06) 12px,rgba(212,175,55,.06) 13px,transparent 13px,transparent 28px,rgba(212,175,55,.04) 28px,rgba(212,175,55,.04) 29px,transparent 29px,transparent 44px);}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.test-card{background:var(--bg-sec);border-radius:1.2rem;padding:1.8rem 1.5rem;border:1px solid rgba(212,175,55,.1);transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;}
+.test-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.25);border-color:rgba(212,175,55,.25);}
+.test-card::before{content:'"';position:absolute;top:.6rem;left:1.2rem;font-family:'Playfair Display',serif;font-size:3.5rem;color:rgba(212,175,55,.12);line-height:1;pointer-events:none;}
+.test-stars{color:var(--gl);font-size:.85rem;letter-spacing:2px;margin-bottom:.75rem;}
+.test-text{font-size:.85rem;color:var(--tx-p);line-height:1.7;font-style:italic;margin-bottom:1rem;}
+.test-author{display:flex;align-items:center;gap:.6rem;}
+.test-avatar{width:38px;height:38px;border-radius:50%;background:var(--go);color:#0b1120;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0;}
+.test-name{font-size:.8rem;font-weight:600;color:var(--tx-p);}
+.test-role{font-size:.65rem;color:var(--tx-s);text-transform:uppercase;letter-spacing:.05em;}
 
 /* CONTACT */
 .contact-sec{background:var(--bg-sec);padding:5rem 1.5rem;position:relative;}
@@ -279,9 +307,10 @@ footer a{color:var(--go);text-decoration:none;}
 #sp-hint.hide{opacity:0;transform:translateY(8px);}
 
 /* RESPONSIVE */
-@media(max-width:900px){.nav-links{display:none;}}
+@media(max-width:900px){.nav-links{display:none;}.test-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:768px){
   .about-grid{grid-template-columns:1fr!important;}
+  .test-grid{grid-template-columns:1fr;}
   .gal-grid{grid-template-columns:repeat(2,1fr);}
   .gal-item.tall{grid-row:span 1;aspect-ratio:4/3;}
   .form-card{padding:2rem 1.25rem;}
@@ -300,6 +329,7 @@ footer a{color:var(--go);text-decoration:none;}
     <a href="#ride" data-i18n="nav.ride">Прогулка</a>
     <a href="#services" data-i18n="nav.svc">Услуги</a>
     <a href="#gallery" data-i18n="nav.gal">Галерея</a>
+    <a href="#testimonials" data-i18n="nav.ts">Отзывы</a>
     <a href="#contact" data-i18n="nav.cnt">Контакты</a>
   </div>
   <div class="nav-right">
@@ -457,6 +487,7 @@ footer a{color:var(--go);text-decoration:none;}
   <div class="hero-inner">
     <span class="hero-badge" id="h-badge" data-i18n="hero.badge">✦ Алматы — ул. Ерубаева 8/10 ✦</span>
     <h1><span id="h-l1" data-i18n="hero.l1">Конные прогулки</span><br/><em id="h-l2" data-i18n="hero.l2">SAQ by Qundyz</em></h1>
+    <div class="hero-gold-line"></div>
     <p id="h-sub" data-i18n="hero.sub">Окунитесь в мир степного духа. Всего в 7 минутах от Президентского парка — незабываемые конные прогулки, стрельба из лука и этнонаряды.</p>
     <div class="hero-stats">
       <div class="h-stat"><span class="num" id="s1n">10 000+</span><span class="lbl" id="s1l" data-i18n="stat.s1l">Довольных гостей</span></div>
@@ -576,6 +607,43 @@ footer a{color:var(--go);text-decoration:none;}
   </div>
 </section>
 
+<div class="kaz-divider-sm"></div>
+
+<!-- TESTIMONIALS -->
+<section class="test-sec" id="testimonials">
+  <div class="wrap" style="text-align:center;">
+    <span class="sec-eye" data-aos="fade-up" data-i18n="ts.eye">Отзывы</span>
+    <h2 class="sec-title" data-aos="fade-up" data-aos-delay="100" data-i18n="ts.title">Что говорят гости</h2>
+    <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
+    <div class="test-grid" data-aos="fade-up" data-aos-delay="250">
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text" data-i18n="ts.1">Невероятные впечатления! Лошади ухоженные и спокойные, инструктор внимательный. Обязательно вернёмся снова. Отдельное спасибо за чай у костра — очень душевно.</p>
+        <div class="test-author">
+          <div class="test-avatar">А</div>
+          <div><div class="test-name" data-i18n="ts.1n">Айгерим</div><div class="test-role" data-i18n="ts.1r">Гость, июнь 2025</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text" data-i18n="ts.2">Великолепная организация, красивые маршруты. Дети были в восторге от стрельбы из лука и общения с лошадьми. Спасибо Qundyz SAQ за тёплый приём!</p>
+        <div class="test-author">
+          <div class="test-avatar">Д</div>
+          <div><div class="test-name" data-i18n="ts.2n">Данияр</div><div class="test-role" data-i18n="ts.2r">Гость, май 2025</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text" data-i18n="ts.3">Очень атмосферное место! Конная прогулка по горам с видом на Алматы — это что-то невероятное. Этнонаряды добавили колорита. Рекомендую всем!</p>
+        <div class="test-author">
+          <div class="test-avatar">М</div>
+          <div><div class="test-name" data-i18n="ts.3n">Мария</div><div class="test-role" data-i18n="ts.3r">Гость, апрель 2025</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact-sec" id="contact">
   <div class="wrap">
@@ -652,7 +720,14 @@ footer a{color:var(--go);text-decoration:none;}
     <a id="ft-wa" href="https://wa.me/77024175882" target="_blank">WhatsApp</a>
     <a id="ft-2g" href="https://2gis.kz/almaty/geo/70000001093833415/76.864960,43.157731" target="_blank">2GIS</a>
   </div>
-  <p style="color:rgba(255,255,255,.45);" id="ft-copy">г. Алматы, ул. Ерубаева 8/10 · +7 702 417 5882 · © 2025 SAQ by Qundyz</p>
+  <div class="kaz-divider-sm" style="margin-bottom:1.25rem;"></div>
+  <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem;font-size:.75rem;">
+    <a href="#home" style="color:var(--tx-s);text-decoration:none;">↑ Наверх</a>
+    <a href="#about" style="color:var(--tx-s);text-decoration:none;" data-i18n="nav.about">О нас</a>
+    <a href="#services" style="color:var(--tx-s);text-decoration:none;" data-i18n="nav.svc">Услуги</a>
+    <a href="#testimonials" style="color:var(--tx-s);text-decoration:none;" data-i18n="nav.ts">Отзывы</a>
+  </div>
+  <p style="color:rgba(255,255,255,.45);font-size:.75rem;max-width:600px;margin:0 auto;line-height:1.6;" id="ft-copy">г. Алматы, ул. Ерубаева 8/10 · +7 702 417 5882 · © 2025 SAQ by Qundyz</p>
 </footer>
 
 
@@ -664,7 +739,7 @@ footer a{color:var(--go);text-decoration:none;}
 // ═══════════════════════════════════════════
 const TRANSLATIONS = {
   ru:{
-    'nav.about':'О нас','nav.ride':'Прогулка','nav.svc':'Услуги','nav.gal':'Галерея','nav.cnt':'Контакты',
+    'nav.about':'О нас','nav.ride':'Прогулка','nav.svc':'Услуги','nav.gal':'Галерея','nav.ts':'Отзывы','nav.cnt':'Контакты',
     'hero.badge':'✦ Алматы — ул. Ерубаева 8/10 ✦','hero.l1':'Конные прогулки','hero.l2':'SAQ by Qundyz',
     'hero.sub':'Окунитесь в мир степного духа. Всего в 7 минутах от Президентского парка — незабываемые конные прогулки, стрельба из лука и этнонаряды.',
     'hero.cta':'Записаться на прогулку','hero.more':'Узнать больше',
@@ -693,6 +768,13 @@ const TRANSLATIONS = {
     'badge.h':'Хит','btn.bk':'Записаться','btn.ds':'Обсудить',
     'gal.eye':'Галерея','gal.title':'Ваши моменты с нами','gal.ig':'📸 Больше фото в Instagram',
     'gl.0':'Наши лошади','gl.1':'Конная прогулка','gl.2':'Закат в горах','gl.3':'Красавцы','gl.4':'Горные тропы','gl.5':'Вид на город',
+    'ts.eye':'Отзывы','ts.title':'Что говорят гости',
+    'ts.1':'Невероятные впечатления! Лошади ухоженные и спокойные, инструктор внимательный. Обязательно вернёмся снова. Отдельное спасибо за чай у костра — очень душевно.',
+    'ts.1n':'Айгерим','ts.1r':'Гость, июнь 2025',
+    'ts.2':'Великолепная организация, красивые маршруты. Дети были в восторге от стрельбы из лука и общения с лошадьми. Спасибо Qundyz SAQ за тёплый приём!',
+    'ts.2n':'Данияр','ts.2r':'Гость, май 2025',
+    'ts.3':'Очень атмосферное место! Конная прогулка по горам с видом на Алматы — это что-то невероятное. Этнонаряды добавили колорита. Рекомендую всем!',
+    'ts.3n':'Мария','ts.3r':'Гость, апрель 2025',
     'stat.s1l':'Довольных гостей','stat.s2l':'Лет опыта','stat.s3l':'От парка',
     'jb.eye':'Работа у нас','jb.sl':'Оплата:','jb.perks':'Дружный коллектив · Атмосфера уважения · Перспектива роста',
     'cn.eye':'Свяжитесь с нами','cn.title':'Запишитесь на<br/>прогулку сегодня','cn.al':'Адрес','cn.p1l':'Основной номер','cn.p2l':'Доп. номер','cn.hl':'Режим работы',
@@ -712,7 +794,7 @@ const TRANSLATIONS = {
     'pwd.title':'Введите пароль','pwd.cancel':'Отмена','pwd.submit':'Войти'
   },
   kz:{
-    'nav.about':'Біз туралы','nav.ride':'Серуен','nav.svc':'Қызметтер','nav.gal':'Галерея','nav.cnt':'Байланыс',
+    'nav.about':'Біз туралы','nav.ride':'Серуен','nav.svc':'Қызметтер','nav.gal':'Галерея','nav.ts':'Пікірлер','nav.cnt':'Байланыс',
     'hero.badge':'✦ Алматы — Ерубаева көшесі 8/10 ✦','hero.l1':'Ат серуені','hero.l2':'SAQ by Qundyz',
     'hero.sub':'Дала рухына батыңыз. Президенттік саябақтан 7 минут қашықтықта — ұмытылмас ат серуені, садақ ату және этно киімдер.',
     'hero.cta':'Серуенге жазылу','hero.more':'Толығырақ',
@@ -741,6 +823,13 @@ const TRANSLATIONS = {
     'badge.h':'Хит','btn.bk':'Жазылу','btn.ds':'Талқылау',
     'gal.eye':'Галерея','gal.title':'Сізбен бірге сəттер','gal.ig':'📸 Instagram-да көбірек фото',
     'gl.0':'Біздің аттар','gl.1':'Ат серуені','gl.2':'Тауда күн батуы','gl.3':'Сұлу аттар','gl.4':'Тau жолдары','gl.5':'Қala көрінісі',
+    'ts.eye':'Пікірлер','ts.title':'Қонақтар не дейді',
+    'ts.1':'Керемет әсер! Жылқылар күтілген және сабырлы, нұсқаушы мұқият. Міндетті түрде қайта келеміз. От басындағы шай үшін бөлек алғыс — өте жылы.',
+    'ts.1n':'Айгерім','ts.1r':'Қонақ, маусым 2025',
+    'ts.2':'Тамаша ұйымдастыру, әдемі маршруттар. Балалар садақ атудан және жылқылармен сөйлесуден қатты қуанды. Qundyz SAQ-қа жылы қабылдау үшін рахмет!',
+    'ts.2n':'Данияр','ts.2r':'Қонақ, мамыр 2025',
+    'ts.3':'Өте атмосфералық орын! Алматыға көрінісі бар таулармен ат серуені — бұл керемет нәрсе. Этнокиімдер түс қосты. Барлығына ұсынамын!',
+    'ts.3n':'Мария','ts.3r':'Қонақ, сәуір 2025',
     'stat.s1l':'Қанағаттанған қonақ','stat.s2l':'Жыл тәжірибе','stat.s3l':'Саябақтан',
     'jb.eye':'Карьера','jb.sl':'Жалақы:','jb.perks':'Достық команда · Сыйлы атмосфера · Даму перспективалары',
     'cn.eye':'Байланыс','cn.title':'Серуенді бүгін<br/>брондаңыз','cn.al':'Мекенжай','cn.p1l':'Негізgi нөмір','cn.p2l':'Қосымша нөмір','cn.hl':'Жұмыс уақыты',
@@ -760,7 +849,7 @@ const TRANSLATIONS = {
     'pwd.title':'Құпия сөз енгізіңіз','pwd.cancel':'Бас тарту','pwd.submit':'Кіру'
   },
   en:{
-    'nav.about':'About','nav.ride':'Ride','nav.svc':'Services','nav.gal':'Gallery','nav.cnt':'Contact',
+    'nav.about':'About','nav.ride':'Ride','nav.svc':'Services','nav.gal':'Gallery','nav.ts':'Reviews','nav.cnt':'Contact',
     'hero.badge':'✦ Almaty — Yerubayev St 8/10 ✦','hero.l1':'Horse Rides','hero.l2':'SAQ by Qundyz',
     'hero.sub':'Immerse yourself in the spirit of the steppe. Just 7 minutes from President Park — unforgettable horse rides, archery, and ethnic costumes.',
     'hero.cta':'Book a Ride','hero.more':'Learn More',
@@ -789,6 +878,13 @@ const TRANSLATIONS = {
     'badge.h':'Top','btn.bk':'Book Now','btn.ds':'Discuss',
     'gal.eye':'Gallery','gal.title':'Your moments with us','gal.ig':'📸 More photos on Instagram',
     'gl.0':'Our horses','gl.1':'Horse ride','gl.2':'Sunset in the mountains','gl.3':'Beautiful horses','gl.4':'Mountain trails','gl.5':'City view',
+    'ts.eye':'Testimonials','ts.title':'What Guests Say',
+    'ts.1':'Incredible experience! The horses are well-groomed and calm, the instructor is attentive. We will definitely come back. Special thanks for the tea by the fire — so heartwarming.',
+    'ts.1n':'Aigerim','ts.1r':'Guest, June 2025',
+    'ts.2':'Excellent organization, beautiful routes. The kids loved the archery and spending time with the horses. Thank you Qundyz SAQ for the warm welcome!',
+    'ts.2n':'Daniyar','ts.2r':'Guest, May 2025',
+    'ts.3':'Such an atmospheric place! A horseback ride through the mountains with a view of Almaty is incredible. The ethnic costumes added great flavor. Highly recommend!',
+    'ts.3n':'Maria','ts.3r':'Guest, April 2025',
     'stat.s1l':'Happy Guests','stat.s2l':'Years Experience','stat.s3l':'From the Park',
     'jb.eye':'Careers','jb.sl':'Pay:','jb.perks':'Friendly team · Respectful atmosphere · Growth prospects',
     'cn.eye':'Contact Us','cn.title':'Book your ride<br/>today','cn.al':'Address','cn.p1l':'Main Number','cn.p2l':'Alt. Number','cn.hl':'Working Hours',
@@ -984,7 +1080,7 @@ function renderCfg(){
   setText('ft-copy', cfg.address+' · +7 '+fmt(cfg.wa1)+' · © '+new Date().getFullYear()+' SAQ by Qundyz');
   cfg.prices.forEach(function(p,i){ setText('p'+(i+1), p); });
   var hero = document.querySelector('.hero');
-  if(hero && cfg.heroImg) hero.style.backgroundImage = "linear-gradient(135deg,rgba(27,67,50,.72) 0%,rgba(62,39,35,.5) 100%), url('"+cfg.heroImg+"')";
+  if(hero && cfg.heroImg) hero.style.backgroundImage = "linear-gradient(135deg,rgba(8,13,26,.88) 0%,rgba(11,17,32,.75) 40%,rgba(17,24,39,.6) 100%), url('"+cfg.heroImg+"')";
   var ai = document.getElementById('about-img'); if(ai && cfg.aboutImg) ai.src = cfg.aboutImg;
   cfg.gallery.forEach(function(url,i){ var img=document.getElementById('gi'+i); if(img&&url) img.src=url; });
   cfg.rideImages.forEach(function(url,i){ var img=document.getElementById('ri'+i); if(img&&url) img.src=url; });
@@ -1362,6 +1458,16 @@ document.addEventListener('DOMContentLoaded', function(){
   setLang(currentLang);
   initMusicFromCfg();
   bindFormWa();
+
+  // Nav scroll shrink
+  var nav = document.querySelector('nav');
+  if (nav) {
+    var checkNav = function(){
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    };
+    window.addEventListener('scroll', checkNav, {passive:true});
+    checkNav();
+  }
 });
 
 </script>
