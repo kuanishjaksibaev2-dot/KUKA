@@ -4,10 +4,14 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title id="pg-title">SAQ by Qundyz — Конные прогулки в Алматы</title>
+<link rel="preconnect" href="https://cdn.tailwindcss.com"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://unpkg.com"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 <style>
 :root{
   --eg:#2d6a4f;--ed:#1b4332;--el:#40916c;
@@ -387,6 +391,7 @@ footer a{color:var(--go);text-decoration:none;}
 </div>
 <div id="adm-toast"></div>
 
+<main>
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-inner">
@@ -437,10 +442,10 @@ footer a{color:var(--go);text-decoration:none;}
     <h2 class="sec-title" data-aos="fade-up" data-aos-delay="100" data-i18n="ri.title">Полный пакет впечатлений</h2>
     <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;">
-      <div class="ride-card" data-aos="fade-up" data-aos-delay="0"><img id="ri0" src="https://images.unsplash.com/photo-1475776408506-9a5371e7a068?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c1">🐎 Конная прогулка</h3><p data-i18n="ri.c1d">Верховая прогулка по живописным холмам с видом на горы и город.</p></div></div>
-      <div class="ride-card" data-aos="fade-up" data-aos-delay="100"><img id="ri1" src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c2">🏹 Стрельба из лука</h3><p data-i18n="ri.c2d">Древнее казахское искусство под руководством опытного инструктора.</p></div></div>
-      <div class="ride-card" data-aos="fade-up" data-aos-delay="200"><img id="ri2" src="https://images.unsplash.com/photo-1490424660416-359912d314b3?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c3">👘 Этнонаряды</h3><p data-i18n="ri.c3d">Традиционные казахские костюмы для незабываемых фотографий.</p></div></div>
-      <div class="ride-card" data-aos="fade-up" data-aos-delay="300"><img id="ri3" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt=""/><div class="ride-card-body"><h3 data-i18n="ri.c4">☕ Чай + хот дог у костра</h3><p data-i18n="ri.c4d">Горячий чай и хот дог у открытого огня после прогулки.</p></div></div>
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="0"><img id="ri0" src="https://images.unsplash.com/photo-1475776408506-9a5371e7a068?w=600&q=80" alt="Конная прогулка" loading="lazy"/><div class="ride-card-body"><h3 data-i18n="ri.c1">🐎 Конная прогулка</h3><p data-i18n="ri.c1d">Верховая прогулка по живописным холмам с видом на горы и город.</p></div></div>
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="100"><img id="ri1" src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600&q=80" alt="Стрельба из лука" loading="lazy"/><div class="ride-card-body"><h3 data-i18n="ri.c2">🏹 Стрельба из лука</h3><p data-i18n="ri.c2d">Древнее казахское искусство под руководством опытного инструктора.</p></div></div>
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="200"><img id="ri2" src="https://images.unsplash.com/photo-1490424660416-359912d314b3?w=600&q=80" alt="Этнонаряды" loading="lazy"/><div class="ride-card-body"><h3 data-i18n="ri.c3">👘 Этнонаряды</h3><p data-i18n="ri.c3d">Традиционные казахские костюмы для незабываемых фотографий.</p></div></div>
+      <div class="ride-card" data-aos="fade-up" data-aos-delay="300"><img id="ri3" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Чай у костра" loading="lazy"/><div class="ride-card-body"><h3 data-i18n="ri.c4">☕ Чай + хот дог у костра</h3><p data-i18n="ri.c4d">Горячий чай и хот дог у открытого огня после прогулки.</p></div></div>
     </div>
   </div>
 </section>
@@ -469,12 +474,12 @@ footer a{color:var(--go);text-decoration:none;}
     <h2 class="sec-title" data-aos="fade-up" data-aos-delay="100" data-i18n="gl.title">Ваши моменты с нами</h2>
     <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
     <div class="gal-grid">
-      <div class="gal-item tall" data-aos="fade-up" data-aos-delay="0"><img id="gi0" src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=700&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.0">Наши лошади</span></div></div>
-      <div class="gal-item" data-aos="fade-up" data-aos-delay="100"><img id="gi1" src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.1">Конная прогулка</span></div></div>
-      <div class="gal-item" data-aos="fade-up" data-aos-delay="200"><img id="gi2" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.2">Закат в горах</span></div></div>
-      <div class="gal-item" data-aos="fade-up" data-aos-delay="150"><img id="gi3" src="https://images.unsplash.com/photo-1443891522184-ffd4b5d7bb04?w=600&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.3">Красавцы</span></div></div>
-      <div class="gal-item" data-aos="fade-up" data-aos-delay="250"><img id="gi4" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.4">Горные тропы</span></div></div>
-      <div class="gal-item" data-aos="fade-up" data-aos-delay="350"><img id="gi5" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt=""/><div class="gal-ov"><span data-i18n="gl.5">Вид на город</span></div></div>
+      <div class="gal-item tall" data-aos="fade-up" data-aos-delay="0"><img id="gi0" src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=700&q=80" alt="Наши лошади" loading="lazy"/><div class="gal-ov"><span data-i18n="gl.0">Наши лошади</span></div></div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="100"><img id="gi1" src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=600&q=80" alt="Конная прогулка" loading="lazy"/><div class="gal-ov"><span data-i18n="gl.1">Конная прогулка</span></div></div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="200"><img id="gi2" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Закат в горах" loading="lazy"/><div class="gal-ov"><span data-i18n="gl.2">Закат в горах</span></div></div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="150"><img id="gi3" src="https://images.unsplash.com/photo-1443891522184-ffd4b5d7bb04?w=600&q=80" alt="Красавцы" loading="lazy"/><div class="gal-ov"><span data-i18n="gl.3">Красавцы</span></div></div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="250"><img id="gi4" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" alt="Горные тропы" loading="lazy"/><div class="gal-ov"><span data-i18n="gl.4">Горные тропы</span></div></div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="350"><img id="gi5" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt="Вид на город" loading="lazy"/><div class="gal-ov"><span data-i18n="gl.5">Вид на город</span></div></div>
     </div>
     <div style="margin-top:2rem;">
       <a id="ig-gal" href="https://www.instagram.com/saq_kundyz?igsh=cXI4ZWY5YnFzc2t6" target="_blank" class="soc-btn soc-ig" data-i18n="gl.ig">📸 Больше фото в Instagram</a>
@@ -490,9 +495,9 @@ footer a{color:var(--go);text-decoration:none;}
     <div class="gold-line" data-aos="fade-up" data-aos-delay="200"></div>
     <p data-aos="fade-up" data-aos-delay="250" style="color:#666;max-width:560px;margin:0 auto 2.5rem;font-size:.95rem;line-height:1.7;" data-i18n="jb.desc">Мы ищем конника-инструктора в команду единомышленников, влюблённых в природу и лошадей. Работа в горах, на свежем воздухе.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-bottom:2.5rem;">
-      <div class="job-card" data-aos="fade-up" data-aos-delay="0"><img id="ji0" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80" alt=""/><div class="job-card-body"><h3 data-i18n="jb.j1">🐎 Конник-инструктор</h3><p data-i18n="jb.j1d">Тары-Аюсай и Санаторий Ак Бастау. Умеешь работать с лошадьми — ты нам нужен!</p></div></div>
-      <div class="job-card" data-aos="fade-up" data-aos-delay="150"><img id="ji1" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80" alt=""/><div class="job-card-body"><h3 data-i18n="jb.j2">📸 Контент-мейкер</h3><p data-i18n="jb.j2d">Снимаешь красивые видео и фото? Работа на свежем воздухе ждёт тебя.</p></div></div>
-      <div class="job-card" data-aos="fade-up" data-aos-delay="300"><img id="ji2" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80" alt=""/><div class="job-card-body"><h3 data-i18n="jb.j3">🌿 Гид по горным турам</h3><p data-i18n="jb.j3d">Любишь горы и хочешь делиться знаниями? Дружный коллектив!</p></div></div>
+      <div class="job-card" data-aos="fade-up" data-aos-delay="0"><img id="ji0" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80" alt="Конник-инструктор" loading="lazy"/><div class="job-card-body"><h3 data-i18n="jb.j1">🐎 Конник-инструктор</h3><p data-i18n="jb.j1d">Тары-Аюсай и Санаторий Ак Бастау. Умеешь работать с лошадьми — ты нам нужен!</p></div></div>
+      <div class="job-card" data-aos="fade-up" data-aos-delay="150"><img id="ji1" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80" alt="Контент-мейкер" loading="lazy"/><div class="job-card-body"><h3 data-i18n="jb.j2">📸 Контент-мейкер</h3><p data-i18n="jb.j2d">Снимаешь красивые видео и фото? Работа на свежем воздухе ждёт тебя.</p></div></div>
+      <div class="job-card" data-aos="fade-up" data-aos-delay="300"><img id="ji2" src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80" alt="Гид по горным турам" loading="lazy"/><div class="job-card-body"><h3 data-i18n="jb.j3">🌿 Гид по горным турам</h3><p data-i18n="jb.j3d">Любишь горы и хочешь делиться знаниями? Дружный коллектив!</p></div></div>
     </div>
     <div style="background:linear-gradient(135deg,var(--ed),var(--eg));border-radius:1.5rem;padding:2.5rem;max-width:600px;margin:0 auto;" data-aos="zoom-in">
       <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff;margin-bottom:.75rem;"><span data-i18n="jb.sl">Оплата:</span> <span id="sal-rng">8 000 — 15 000₸ / день</span></h3>
@@ -549,6 +554,8 @@ footer a{color:var(--go);text-decoration:none;}
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- MUSIC PLAYER -->
 <div id="sp-hint">🎵 <b>Нажмите в любом месте</b> — и музыка зазвучит!</div>
@@ -618,13 +625,13 @@ const TRANSLATIONS = {
     'sv.6':'Тимбилдинг','sv.6l':'Для компаний','sv.6p':'По запросу','sv.6s':'От 5 человек',
     'sv.6f1':'Конные активности для команды','sv.6f2':'Стрельба из лука на время','sv.6f3':'Конное шоу','sv.6f4':'Фуршет и костёр','sv.6f5':'Корпоративное фото/видео',
     'badge.h':'Хит','btn.bk':'Записаться','btn.ds':'Обсудить',
-    'gal.eye':'Галерея','gl.eye':'Галерея','gal.title':'Ваши моменты с нами','gl.title':'Ваши моменты с нами','gal.ig':'📸 Больше фото в Instagram','gl.ig':'📸 Больше фото в Instagram',
+    'gal.eye':'Галерея','gal.title':'Ваши моменты с нами','gal.ig':'📸 Больше фото в Instagram',
     'gl.0':'Наши лошади','gl.1':'Конная прогулка','gl.2':'Закат в горах','gl.3':'Красавцы','gl.4':'Горные тропы','gl.5':'Вид на город',
     'stat.s1l':'Довольных гостей','stat.s2l':'Лет опыта','stat.s3l':'От парка',
-    'jb.eye':'Карьера','jb.sl':'Оплата:','jb.perks':'Дружный коллектив · Атмосфера уважения · Перспектива роста',
+    'jb.eye':'Работа у нас','jb.sl':'Оплата:','jb.perks':'Дружный коллектив · Атмосфера уважения · Перспектива роста',
     'cn.eye':'Свяжитесь с нами','cn.title':'Запишитесь на<br/>прогулку сегодня','cn.al':'Адрес','cn.p1l':'Основной номер','cn.p2l':'Доп. номер','cn.hl':'Режим работы',
     'fm.title':'Оставьте заявку','fm.sub':'Мы свяжемся с вами в течение 30 минут','fm.name':'Ваше имя','fm.phone':'Телефон','fm.svc':'Услуга','fm.ch':'Выберите услугу...','fm.msg':'Сообщение','fm.send':'📲 Отправить через WhatsApp','fm.consent':'Нажимая кнопку, вы соглашаетесь с условиями обработки данных','fm.pnm':'Айгерим Сейткали','fm.pmsg':'Расскажите о запросе, количестве человек или дате...',
-    'jb.eye':'Работа у нас','jb.title':'Присоединяйтесь к команде',
+    'jb.title':'Присоединяйтесь к команде',
     'jb.desc':'Ищем инструктора по верховой езде в дружную команду людей, влюблённых в природу и лошадей. Работа в горах, свежий воздух.',
     'jb.j1':'🐎 Инструктор по ВЕ','jb.j1d':'Тары-Айусай и санаторий Ак Бастау. Умеешь работать с лошадьми? Ты нам нужен!',
     'jb.j2':'📸 Контент-мейкер','jb.j2d':'Снимаешь красивые видео и фото? Работа на природе с красивыми лошадьми ждёт тебя.',
@@ -666,7 +673,7 @@ const TRANSLATIONS = {
     'sv.6':'Тимбилдинг','sv.6l':'Компаниялар үшін','sv.6p':'Сұраныс бойынша','sv.6s':'5 адамнан',
     'sv.6f1':'Аттарда топтық белсенділік','sv.6f2':'Уақытпен садақ ату','sv.6f3':'Аттар шоуы','sv.6f4':'Фуршет пен от','sv.6f5':'Корпоративтік фото/бейне',
     'badge.h':'Хит','btn.bk':'Жазылу','btn.ds':'Талқылау',
-    'gal.eye':'Галерея','gl.eye':'Галерея','gal.title':'Сізбен бірге сəттер','gl.title':'Сізбен бірге сəттер','gal.ig':'📸 Instagram-да көбірек фото','gl.ig':'📸 Instagram-да көбірек фото',
+    'gal.eye':'Галерея','gal.title':'Сізбен бірге сəттер','gal.ig':'📸 Instagram-да көбірек фото',
     'gl.0':'Біздің аттар','gl.1':'Ат серуені','gl.2':'Тауда күн батуы','gl.3':'Сұлу аттар','gl.4':'Тau жолдары','gl.5':'Қala көрінісі',
     'stat.s1l':'Қанағаттанған қonақ','stat.s2l':'Жыл тәжірибе','stat.s3l':'Саябақтан',
     'jb.eye':'Карьера','jb.sl':'Жалақы:','jb.perks':'Достық команда · Сыйлы атмосфера · Даму перспективалары',
@@ -714,7 +721,7 @@ const TRANSLATIONS = {
     'sv.6':'Team Building','sv.6l':'For Companies','sv.6p':'On request','sv.6s':'From 5 people',
     'sv.6f1':'Equestrian team activities','sv.6f2':'Timed archery','sv.6f3':'Horse show','sv.6f4':'Buffet and bonfire','sv.6f5':'Corporate photo/video',
     'badge.h':'Top','btn.bk':'Book Now','btn.ds':'Discuss',
-    'gal.eye':'Gallery','gl.eye':'Gallery','gal.title':'Your moments with us','gl.title':'Your moments with us','gal.ig':'📸 More photos on Instagram','gl.ig':'📸 More photos on Instagram',
+    'gal.eye':'Gallery','gal.title':'Your moments with us','gal.ig':'📸 More photos on Instagram',
     'gl.0':'Our horses','gl.1':'Horse ride','gl.2':'Sunset in the mountains','gl.3':'Beautiful horses','gl.4':'Mountain trails','gl.5':'City view',
     'stat.s1l':'Happy Guests','stat.s2l':'Years Experience','stat.s3l':'From the Park',
     'jb.eye':'Careers','jb.sl':'Pay:','jb.perks':'Friendly team · Respectful atmosphere · Growth prospects',
@@ -756,19 +763,13 @@ function setLang(lang){
   var titles = {ru:'SAQ by Qundyz — Конные прогулки в Алматы', kz:'SAQ by Qundyz — Алматыдағы ат серуені', en:'SAQ by Qundyz — Horse Rides in Almaty'};
   document.title = titles[lang];
   var pt = document.getElementById('pg-title'); if(pt) pt.textContent = titles[lang];
-  applyCfgText();
   try { localStorage.setItem('saq_lang', lang); } catch(e){}
-}
-function applyCfgText(){
-  // Custom admin text is no longer applied - all text uses TRANSLATIONS
-  // This function is kept for compatibility but does nothing
-  // All text content is now managed through the TRANSLATIONS object
 }
 
 // ═══════════════════════════════════════════
 // ADMIN PANEL - PASSWORD PROTECTION
 // ═══════════════════════════════════════════
-const ADMIN_PASSWORD = 'saq2025'; // Change this to your desired password
+const ADMIN_PASSWORD = 'saq2025'; // ⚠️ Измените пароль! Рекомендуется задать сложный пароль перед деплоем
 let isAuthenticated = false;
 
 function admOpen(){
@@ -1034,7 +1035,6 @@ function admApply(){
   cfg.jobImages=collectImageArray('jf', cfg.jobImages);
   try{ localStorage.setItem('saq_cfg', JSON.stringify(cfg)); } catch(e){}
   renderCfg();
-  applyCfgText();
   admToast('✅ Изменения применены!');
 }
 function admExport(){
